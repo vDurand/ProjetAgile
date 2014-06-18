@@ -9,6 +9,7 @@
 	</head>
 
 	<body>
+		<h1>Pizza</h1>>
 		
 		<?php
 
@@ -21,14 +22,15 @@
 	
 	while ($donnees = mysqli_fetch_assoc($reponse))
 	{
-		?>									<?php echo $donnees['PIZ_Nom']; ?>
+		?>									Nom pizza : <?php echo $donnees['PIZ_Nom']; ?>
+			<br/>
+			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?>
 				        	<?php
 	
 	}
 	mysqli_free_result($reponse);
 	?>							
 			</body>
-	
 	<footer>
 		<div>
 			Projet Agile <?php echo date('Y');?>
