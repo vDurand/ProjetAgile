@@ -11,6 +11,8 @@
 
 	<body>
 		<h1>Modification de pizza</h1>
+		<a id="button" href="home.php">Retour Liste Pizza</a>
+		<br/><br/>
 
 		<?php
 
