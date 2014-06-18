@@ -10,7 +10,7 @@
 	</head>
 
 	<body>
-		<h1 href="home.php">Pizza</h1>
+		<h1> <a href="home.php">Pizza</a></h1>
 		
 		<?php
 
