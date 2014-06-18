@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		
 		<title>PIZZAIOLO</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	</head>
 	<h1>PIZZAIOLO</h1>
 	<body>
