@@ -22,17 +22,3 @@ footer{
 	margin-top:30px;
 	text-align : right;
 }
-
-	/*bouton neutre*/
-
-#button{
-	text-decoration : underline;
-}
-
-	/*bouton survolé*/
-
-#button:hover{
-	text-decoration : underline;
-	font-size : 150 %;
-
-	/*bouton cliqué*/
