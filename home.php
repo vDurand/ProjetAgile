@@ -11,7 +11,9 @@
 
 	<body>
 		<h1>Pizza</h1>
-		<a id = "button" href="ajout_pizza.php">Ajouter une pizza</a>
+		<div id = "button"> 
+			<a href="ajout_pizza.php">Ajouter une pizza</a>
+		</div>
 		<br/><br/>
 		<div id ="list">
 		<?php
