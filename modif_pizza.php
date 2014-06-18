@@ -28,10 +28,10 @@
 			<form method="post" action="postModif_pizza.php">
 			<fieldset>
 			<p>
-			<?php echo $donnees['PIZ_IdPizza']; ?>
 			<label for="name">Nom : </label><input required name="name" type="text" id="name" value="<?php echo $donnees['PIZ_Nom']; ?>"/><br />
 			<label for="price">Prix : </label><input required type="text" name="price" id="price"  value="<?php echo $donnees['PIZ_Prix']; ?>"/><br />
 			<input type="hidden" name="num" value="<?php echo $num; ?>">
+			<label for="suppr">Supprimer : </label><input type="checkbox" name="suppr" value="1"> 
 			</p>
 			</fieldset>
 			<table>

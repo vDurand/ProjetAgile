@@ -22,23 +22,34 @@
 	$name=strtoupper(addslashes($_POST["name"]));
 	$price=($_POST["price"]);
 	$num=($_POST["num"]);
-
-	$query = "UPDATE Pizza SET PIZ_Nom = '$name', PIZ_Prix = '$price' WHERE PIZ_IdPizza = '$num';";
-
-  	$sql = mysqli_query($db, $query);
-  	$errr=mysqli_error($db);
-
-  	if($sql){
-	        echo '<div id="good">     
-	            <label>Pizza modifiée avec succès</label>
-	            </div>';
-		?>									
-			<br/><br/>
-				        	<?php
+	$suppr=($_POST["suppr"]);
 	
+	
+	if ($suppr==1) {
+		$query2 = "DELETE FROM Pizza WHERE PIZ_IdPizza = '$num';";
+		
+		  	$sql2 = mysqli_query($db, $query2);
+		  	$errr2=mysqli_error($db);
+		  	
+		  	if($sql2){
+		  	      echo '<div id="good">     
+		  	          <label>Pizza supprimée</label>
+		  	          </div>';
+		  	}
 	}
-	mysqli_free_result($reponse);
-	?>							
+	else {
+		$query = "UPDATE Pizza SET PIZ_Nom = '$name', PIZ_Prix = '$price' WHERE PIZ_IdPizza = '$num';";
+		
+		  	$sql = mysqli_query($db, $query);
+		  	$errr=mysqli_error($db);
+		
+		  	if($sql){
+			        echo '<div id="good">     
+			            <label>Pizza modifiée avec succès</label>
+			            </div>';
+            }
+	}
+	?>			<br/><br/>				
 			</body>
 	<footer>
 		<div>
