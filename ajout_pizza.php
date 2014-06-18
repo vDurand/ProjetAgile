@@ -9,16 +9,8 @@
 	</head>
 
 	<body>
-		<h1>Ajout de pizza</h1>>
-		
-		<?php
+		<h1>Ajout de pizza</h1>
 
-	if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
-		echo '';
-	else
-		echo 'Erreur';
-	?>
-	
 			<form method="post" action="post_pizza.php">
 			<fieldset>
 			<p>
@@ -28,7 +20,7 @@
 			</fieldset>
 			<table>
 			<tr><td><input type="submit" value="Ajouter" /></td>
-			<td><input type="reset" value="Reset"></td></tr></table></form><?php
+			<td><input type="reset" value="Reset"></td></tr></table></form>
 	
 						
 			</body>
