@@ -11,9 +11,7 @@
 
 	<body>
 		<h1>Pizza</h1>
-		<div id = "button"> 
-			<a href="ajout_pizza.php">Ajouter une pizza</a>
-		</div>
+		<a id="button" href="ajout_pizza.php">Ajouter une pizza</a>
 		<br/><br/>
 		<div id ="list">
 		<?php
@@ -47,9 +45,6 @@
 		<div>
 			&copy; Projet Agile <?php echo date('Y');?>
 		</div>
-		<form method="post" action="home.php">
-			<input type="submit" value="Retour à l'acceuil" />
-		</form>
 	</footer>
 
 </html>
