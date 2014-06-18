@@ -28,7 +28,7 @@
 		if($donnees['PIZ_Valide']==1){
 		?>									>Nom pizza : <?php echo $donnees['PIZ_Nom']; ?>
 			<br/>
-			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?>
+			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?> &euro;
 			<br/><br/>
 				        	<?php
 		}
