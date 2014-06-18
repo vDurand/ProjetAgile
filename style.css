@@ -32,9 +32,3 @@ footer{
 	padding-top: 15px;
 	padding-left : 30px;
 }
-
-fieldset{
-	border-style:solid;
-	border-color:"darkgreen";
-	border-size:2px;
-}
