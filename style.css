@@ -34,12 +34,5 @@ footer{
 #button:hover{
 	text-decoration : underline;
 	font-size : 150 %;
-
-	/*bouton cliqué*/
-
-#button:active{
-	text-decoration : underline;
-	font-size : 150%;
-	color : blue;
 }
-	
+
