@@ -10,6 +10,15 @@
 	</head>
 
 	<body>
+		<table>
+			<tr>
+				<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
+				<td><a id="button" href="commande.php">Commander une pizza</a></td>
+				<td><a id="button" href="listComm.php">Liste des commandes</a></td>
+				<td><a id="button" href="listPizza.php">Liste des pizza</a></td>
+			</tr>
+		</table>
+		<br/><br/>
 		<h1>Modification de pizza</h1>
 		<a id="button" href="home.php">Retour Liste Pizza</a>
 		<br/><br/>
