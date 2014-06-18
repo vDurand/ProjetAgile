@@ -28,7 +28,7 @@
 	else
 		echo 'Erreur';
 	
-	$reponse = mysqli_query($db, "SELECT * FROM Commander JOIN Pizza USING (PIZ_IdPizza) JOIN Client USING (CLI_IdClient)");
+	$reponse = mysqli_query($db, "SELECT * FROM Commander JOIN Pizza USING (PIZ_IdPizza) JOIN Client USING (CLI_IdClient) JOIN Personne USING (PER_Id)");
 	
 	while ($donnees = mysqli_fetch_assoc($reponse))
 	{
@@ -39,6 +39,8 @@
 			Quantité : <?php echo $donnees['COM_Quantite']; ?>
 			<br/>
 			Prix total : <?php echo $donnees['COM_Quantite']*$donnees['PIZ_Prix']; ?> &euro;
+			<br/>
+			Client : <?php echo $donnees['PER_Nom']; ?> <?php echo $donnees['PER_Prenom']; ?>
 			<br/><br/>
 				        	<?php
 	}
