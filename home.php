@@ -4,7 +4,7 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Intranet association Revivre</title>
+		<title>Gestion de pizza</title>
 		<!-- IUT Caen - DUT Info (2013-2015) -->
 	</head>
 
