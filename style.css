@@ -9,6 +9,8 @@ h1{
 }
 
 #list{
-	background-color: red;
+	border-style: solid;
+	border-radius : 20px;
+	border-size:1px;
 }
 	
