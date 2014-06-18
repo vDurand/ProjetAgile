@@ -80,26 +80,34 @@
 									$sql = "SELECT * FROM Patron JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
 									$data = mysqli_fetch_assoc($req);
-									if($data['PER_Id'] != ""){
+									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un patron
 										echo("Vous êtes le patron");
+										session_start();
+										$_SESSION['user'] = "patron";
 									}
 									$sql = "SELECT * FROM Client JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
 									$data = mysqli_fetch_assoc($req);
-									if($data['PER_Id'] != ""){
+									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un client
 										echo("Vous êtes le Client");
+										session_start();
+										$_SESSION['user'] = "client";
 									}
 									$sql = "SELECT * FROM Employer JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
 									$data = mysqli_fetch_assoc($req);
-									if($data['PER_Id'] != ""){
+									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un employer
 										echo("Vous êtes un employer");
+										session_start();
+										$_SESSION['user'] = "employer";
 									}
 									$sql = "SELECT * FROM Pizzaiolo JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
 									$data = mysqli_fetch_assoc($req);
-									if($data['PER_Id'] != ""){
+									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un pizzaiolo
 										echo("Vous êtes le Pizzaiolo");
+										session_start();
+										$_SESSION['user'] = "pizzaiolo";
 									}
 								session_start();
 								$pseudo = $_SESSION['pseudo'];	
