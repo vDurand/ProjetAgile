@@ -3,7 +3,6 @@
 <form>
 	<head>
 		<meta charset="utf-8" />
-		
 		<title>PIZZAIOLO</title>
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	</head>
@@ -15,7 +14,7 @@
 		
 		
 		<form action=".php" method="post">
-		<img src="image/pizza.jpg" height="200" width="1500" />
+		<img src="image/Supreme_pizza.jpg" height="200" width="1500" />
 <<<<<<< HEAD
 		</br>
 		<a id="listPizza" href="listPizza.php">Liste des pizzas</a>
