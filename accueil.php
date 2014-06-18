@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 		<title>PIZZAIOLO</title>
 	</head>
-	<h1 id="pizzaiolo" >PIZZAIOLO</h1>
+	<h1>PIZZAIOLO</h1>
 	<body>
 		
 		</br>
