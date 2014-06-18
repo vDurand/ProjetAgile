@@ -14,8 +14,8 @@
 			<form method="post" action="post_pizza.php">
 			<fieldset>
 			<p>
-			<label for="name">Nom : </label><input name="name" type="text" id="name" /><br />
-			<label for="price">Prix : </label><input type="text" name="price" id="price" />
+			<label for="name">Nom : </label><input required name="name" type="text" id="name" /><br />
+			<label for="price">Prix : </label><input required type="text" name="price" id="price" />
 			</p>
 			</fieldset>
 			<table>
