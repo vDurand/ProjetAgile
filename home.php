@@ -25,12 +25,13 @@
 	
 	while ($donnees = mysqli_fetch_assoc($reponse))
 	{
+		if($donnees['PIZ_Valide']==1){
 		?>									>Nom pizza : <?php echo $donnees['PIZ_Nom']; ?>
 			<br/>
 			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?>
 			<br/><br/>
 				        	<?php
-	
+		}
 	}
 	mysqli_free_result($reponse);
 	?>				</div>			
