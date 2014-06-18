@@ -26,7 +26,7 @@
 	
 	
 	if ($suppr==1) {
-		$query2 = "DELETE FROM Pizza WHERE PIZ_IdPizza = '$num';";
+		$query2 = "UPDATE Pizza SET PIZ_Valide = 0 WHERE PIZ_IdPizza = '$num';";
 		
 		  	$sql2 = mysqli_query($db, $query2);
 		  	$errr2=mysqli_error($db);
