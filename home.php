@@ -13,6 +13,7 @@
 		<h1>Pizza</h1>
 		<a href="ajout_pizza.php">Ajouter une pizza</a>
 		<br/><br/>
+		<div id ="list">
 		<?php
 
 	if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
@@ -32,7 +33,7 @@
 	
 	}
 	mysqli_free_result($reponse);
-	?>							
+	?>				</div>			
 			</body>
 	<footer>
 		<div>
