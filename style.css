@@ -33,7 +33,7 @@ footer{
 	padding-left : 30px;
 }
 
-#presentation{
+fieldset{
 	border-style:solid;
 	border-color:"darkgreen";
 	border-size:2px;
