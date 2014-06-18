@@ -13,6 +13,7 @@
 		<h1>Pizza</h1>
 		<a href="ajout_pizza.php">Ajouter une pizza</a>
 		<br/><br/>
+		<div id ="list">
 		<?php
 
 	if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
@@ -24,19 +25,24 @@
 	
 	while ($donnees = mysqli_fetch_assoc($reponse))
 	{
+		if($donnees['PIZ_Valide']==1){
 		?>									>Nom pizza : <?php echo $donnees['PIZ_Nom']; ?>
 			<br/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 			Prix pizza : <?php echo $donnees['PIZ_Prix']."€"; ?>
 =======
 			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?>
 >>>>>>> origin/master
+=======
+			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?> &euro;
+>>>>>>> origin/master
 			<br/><br/>
 				        	<?php
-	
+		}
 	}
 	mysqli_free_result($reponse);
-	?>							
+	?>				</div>			
 			</body>
 	<footer>
 		<div>
