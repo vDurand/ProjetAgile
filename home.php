@@ -47,6 +47,9 @@
 		<div>
 			&copy; Projet Agile <?php echo date('Y');?>
 		</div>
+		<form method="post" action="home.php">
+			<input type="submit" value="Retour à l'acceuil" />
+		</form>
 	</footer>
 
 </html>
