@@ -11,19 +11,19 @@
 
 	<body>
 <div id="corps">
-		<table>
-			<tr>
-				<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
-				<td><a id="button" href="commande.php">Commander une pizza</a></td>
-				<td><a id="button" href="listComm.php">Liste des commandes</a></td>
-				<td><a id="button" href="listPizza.php">Liste des pizza</a></td>
-			</tr>
-		</table>
-		<br/><br/>
 			<div id="labelT">     
-				<label>Ajouter une Commande</label>
+				<h1>Ajouter une Commande</h1>
 			</div>
 			<br>
+			<table>
+				<tr>
+					<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
+					<td><a id="button" href="commande.php">Commander une pizza</a></td>
+					<td><a id="button" href="listComm.php">Liste des commandes</a></td>
+					<td><a id="button" href="listPizza.php">Liste des pizza</a></td>
+				</tr>
+			</table>
+					<br/><br/>
 			<form method="post" action="commandePost.php" name="commande" formtype="1" colvalue="2">
 				<div id="labelCat">
 					<table align="center">

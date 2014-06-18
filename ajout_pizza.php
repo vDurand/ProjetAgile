@@ -10,19 +10,18 @@
 	</head>
 
 	<body>
-	<table>
-		<tr>
-			<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
-			<td><a id="button" href="commande.php">Commander une pizza</a></td>
-			<td><a id="button" href="listComm.php">Liste des commandes</a></td>
-			<td><a id="button" href="listPizza.php">Liste des pizza</a></td>
-		</tr>
-	</table>
-	<br/><br/>
+	
 		<h1>Ajout de pizza</h1>
-		<a id="button" href="home.php">Retour Liste Pizza</a>
-		<br/><br/>
-
+		<br/>
+<table>
+	<tr>
+		<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
+		<td><a id="button" href="commande.php">Commander une pizza</a></td>
+		<td><a id="button" href="listComm.php">Liste des commandes</a></td>
+		<td><a id="button" href="listPizza.php">Liste des pizza</a></td>
+	</tr>
+</table>
+<br/><br/>
 			<form method="post" action="post_pizza.php">
 			<fieldset>
 			<p>
