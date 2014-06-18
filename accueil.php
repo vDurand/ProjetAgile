@@ -21,7 +21,7 @@
 				 <input type="button" value = " pizza"> 
 			
 				<input type="button" value = "connexion"><br></br>
-				<fieldset id="presentation">
+				<fieldset>
 				<p>PRESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIRE><br></br>
 
 LIVRAISON GRATUITE : 00 00 000 0000<br></br>
