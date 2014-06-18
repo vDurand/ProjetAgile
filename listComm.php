@@ -10,12 +10,13 @@
 	</head>
 
 	<body>
-		<h1>Pizza</h1>
+		<h1>Commande de Pizza</h1>
 		<table>
 			<tr>
 				<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
 				<td><a id="button" href="commande.php">Commander une pizza</a></td>
 				<td><a id="button" href="listComm.php">Liste des commandes</a></td>
+				<td><a id="button" href="home.php">Liste des pizza</a></td>
 			</tr>
 		</table>
 		<br/><br/>
@@ -27,22 +28,19 @@
 	else
 		echo 'Erreur';
 	
-	$reponse = mysqli_query($db, "SELECT * FROM Pizza");
+	$reponse = mysqli_query($db, "SELECT * FROM Commander JOIN Pizza USING (PIZ_IdPizza) JOIN Client USING (CLI_IdClient)");
 	
 	while ($donnees = mysqli_fetch_assoc($reponse))
 	{
-		if($donnees['PIZ_Valide']==1){
-		?>	>Nom pizza : <?php echo $donnees['PIZ_Nom']; ?>
+		?>	>Pizza : <?php echo $donnees['PIZ_Nom']; ?>
 			<br/>
-			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?> &euro;
+			Prix unitaire : <?php echo $donnees['PIZ_Prix']; ?> &euro;
 			<br/>
-			<form method="post" action="modif_pizza.php">
-			<input type="hidden" name="num" value="<?php echo $donnees['PIZ_IdPizza']; ?>">
-			<input type="submit" value="Modifier" />
-			</form>
+			Quantité : <?php echo $donnees['COM_Quantite']; ?>
+			<br/>
+			Prix total : <?php echo $donnees['COM_Quantite']*$donnees['PIZ_Prix']; ?> &euro;
 			<br/><br/>
 				        	<?php
-		}
 	}
 	mysqli_free_result($reponse);
 	?>				</div>			
