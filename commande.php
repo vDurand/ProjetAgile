@@ -20,11 +20,11 @@
 					<table align="center">
 						<tr>
 							<td style="text-align: left; width: 150px;">
-								<label>Pizza</label>
+								<label>Pizza :</label>
 							</td>
 							<td>
 								<div class="selectType">
-		          					<select name="Client">
+		          					<select name="pizza">
 		          			<?php
 
 	if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
@@ -54,21 +54,21 @@
 					<table align="center">
 						<td style="vertical-align:top;">
 							<table id="leftT" colcount="0" cellpadding="10">
-								<tr id="Chantier_Num">
+								<tr>
 									<td style="text-align: left; width: 150px; white-space: normal;">
 										<label>Quantité :</label>
 									</td>
 									<td>
-										<input id="Nombre" required maxlength="255" name="Number" type="text" class="inputC"> 
+										<input id="number" required maxlength="255" name="number" type="text" class="inputC"> 
 									</td>
 								</tr>
-								<tr id="Chantier_Resp">
+								<tr>
 									<td style="text-align: left; width: 150px; white-space: normal;">
 										<label>Client :</label>
 									</td>
 									<td>
 										<div class="selectType">
-								            <select name="Client">
+								            <select name="client">
 								                  <?php
 								$reponseBis = mysqli_query($db, "SELECT * FROM Client cl JOIN Personne pe ON cl.PER_Id=pe.PER_Id ORDER BY PER_Nom");
 								while ($donneesBis = mysqli_fetch_assoc($reponseBis))
