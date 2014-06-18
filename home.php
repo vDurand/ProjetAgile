@@ -25,6 +25,7 @@
 		?>									Nom pizza : <?php echo $donnees['PIZ_Nom']; ?>
 			<br/>
 			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?>
+			<br/><br/>
 				        	<?php
 	
 	}
