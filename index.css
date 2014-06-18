@@ -1,0 +1,80 @@
+body{
+	background: url(bg-pizz.jpg) 50% 0% no-repeat fixed;
+	font-family: Helvetica;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0px auto 0px auto;
+}
+#logo {
+	float: left;
+	margin: 5px 5px 5px 15px;
+}
+#entete {
+	width: auto;
+	height:50px;
+	background: #CB0707;
+}
+
+.bandeau, .bandeau ul{
+	margin:0;
+	float:right;
+	padding: 0;
+}
+
+.bandeau li{
+	float:left;
+	position:relative;
+	height: 25px;
+	list-style-type: none;
+}
+
+.bandeau a{
+	font-style:italic;
+	display: block;
+	padding: 14px 27px;
+	color: #fff;
+	font-size: 1.01em;
+	background-color:#CB0707;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#corps{
+	overflow: scroll;
+	width: 950px;
+	height:645px;
+	background-color: #fff;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	margin: 0px auto 0px auto;
+}
+
+footer{
+	color: #FFFFFF;
+	height: 30px;
+	background: #CB0707;
+	width: 960px;
+	padding: 5;
+	margin: 10px auto 8px auto;
+	text-align: center;
+}
+
+footer div {
+	padding-top: 10px;
+}
+footer div a:link, footer div a:visited{
+	text-decoration: none;
+	color:#ffffff;
+}
+
+img {
+	float:top left;
+}
+
+.bandeau a:hover{
+	background: #950A0A;
+}
