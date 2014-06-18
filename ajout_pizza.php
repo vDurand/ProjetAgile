@@ -17,12 +17,8 @@
 		echo '';
 	else
 		echo 'Erreur';
-	$i = 2;
-	$reponse = mysqli_query($db, "SELECT * FROM Pizza");
+	?>
 	
-	while ($donnees = mysqli_fetch_assoc($reponse))
-	{
-		?>
 			<form method="post" action="post_pizza.php">
 			<fieldset>
 			<p>
@@ -34,9 +30,7 @@
 			<tr><td><input type="submit" value="Ajouter" /></td>
 			<td><input type="reset" value="Reset"></td></tr></table></form><?php
 	
-	}
-	mysqli_free_result($reponse);
-	?>							
+						
 			</body>
 	<footer>
 		<div>
