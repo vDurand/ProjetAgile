@@ -3,17 +3,25 @@
 <form>
 	<head>
 		<meta charset="utf-8" />
-		
 		<title>PIZZAIOLO</title>
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	</head>
 	<h1>PIZZAIOLO</h1>
-	</br>
-	</br>
+	<body>
+		
+		</br>
+		</br>
 		
 		
 		<form action=".php" method="post">
 		<img src="image/Supreme_pizza.jpg" height="200" width="1500" />
+<<<<<<< HEAD
+		</br>
+		<a id="listPizza" href="listPizza.php">Liste des pizzas</a>
+		<a id="connexion" href="connexion.php">Connexion</a>
+
+		<p>RESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIRE<br></br>
+=======
 			
 				<legend></legend> <br/>
 				 <input type="button" value = "Page d'accueil">
@@ -21,7 +29,8 @@
 			
 				<input type="button" value = "connexion"><br></br>
 				<fieldset>
-				<p>RESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIREbr><br></br>
+				<p>RESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIRE><br></br>
+>>>>>>> FETCH_HEAD
 
 LIVRAISON GRATUITE : 00 00 000 0000<br></br>
 
