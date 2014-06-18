@@ -3,11 +3,10 @@
 <form>
 	<head>
 		<meta charset="utf-8" />
-		
-		<title>PIZZAIOLO</title>
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<title>PIZZAIOLO</title>
 	</head>
-	<h1>PIZZAIOLO</h1>
+	<h1 id="pizzaiolo" >PIZZAIOLO</h1>
 	<body>
 		
 		</br>
@@ -23,7 +22,7 @@
 			
 				<input type="button" value = "connexion"><br></br>
 				<fieldset>
-				<p>RESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIRE<br></br>
+				<p>RESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIREbr><br></br>
 
 LIVRAISON GRATUITE : 00 00 000 0000<br></br>
 
