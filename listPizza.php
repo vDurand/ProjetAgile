@@ -13,6 +13,7 @@
 		<h1>Pizza</h1>
 		<table>
 			<tr>
+				<td><a id="button" href="acceuil.php">Acceuil</a></td>
 				<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
 				<td><a id="button" href="commande.php">Commander une pizza</a></td>
 				<td><a id="button" href="listComm.php">Liste des commandes</a></td>
