@@ -14,7 +14,7 @@
 		
 		
 		<form action=".php" method="post">
-		<img src="image/Supreme_pizza.jpg" height="200" width="1500" />
+		<img src="image/pizza.jpg" height="200" width="1500" />
 			
 				<legend></legend> <br/>
 				 <input type="button" value = "Page d'accueil">
