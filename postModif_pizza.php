@@ -10,17 +10,17 @@
 	</head>
 
 	<body>
-	<table>
-		<tr>
-			<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
-			<td><a id="button" href="commande.php">Commander une pizza</a></td>
-			<td><a id="button" href="listComm.php">Liste des commandes</a></td>
-			<td><a id="button" href="listPizza.php">Liste des pizza</a></td>
-		</tr>
-	</table>
-	<br/><br/>
+	
 		<h1> <a href="home.php">Pizza</a></h1>
-		
+		<table>
+			<tr>
+				<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
+				<td><a id="button" href="commande.php">Commander une pizza</a></td>
+				<td><a id="button" href="listComm.php">Liste des commandes</a></td>
+				<td><a id="button" href="listPizza.php">Liste des pizza</a></td>
+			</tr>
+		</table>
+		<br/><br/>
 		<?php
 
 	if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))

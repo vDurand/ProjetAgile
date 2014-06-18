@@ -10,6 +10,9 @@
 	</head>
 
 	<body>
+		
+		<h1>Modification de pizza</h1>
+		<br/><br/>
 		<table>
 			<tr>
 				<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
@@ -19,10 +22,6 @@
 			</tr>
 		</table>
 		<br/><br/>
-		<h1>Modification de pizza</h1>
-		<a id="button" href="home.php">Retour Liste Pizza</a>
-		<br/><br/>
-
 		<?php
 
 	if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
