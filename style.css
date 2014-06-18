@@ -23,6 +23,8 @@ footer{
 	text-align : right;
 }
 
+	<!-- bouton neutre -->
+
 #button{
 	padding-top: 7px; /*permet le centrage vertical*/
 	text-align: center;
@@ -38,6 +40,8 @@ footer{
 	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5), 0 -1px 0 rgba( 255, 255, 255, 0.4);
 }
 
+	<!-- bouton survolé -->
+
 #button:hover{
 	color: #222;
 	background: #555;
@@ -47,6 +51,8 @@ footer{
 	background: -o-linear-gradient( #777, #333);
 	background: linear-gradient( #777, #333);
 }
+
+	<!-- bouton cliqué -->
 
 #button:active{
 	color: #000;
