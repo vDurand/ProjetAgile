@@ -76,11 +76,35 @@
 								
 								if ($_POST['pseudo'] ==  $data['PER_Pseudo'] && $_POST['password'] ==  $data['PER_Mdp'])
 								{
-								
+									$pseudo= $_POST['pseudo'];
+									$sql = "SELECT * FROM Patron JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
+									$req = mysqli_query($db, $sql);
+									$data = mysqli_fetch_assoc($req);
+									if($data['PER_Id'] != ""){
+										echo("Vous êtes le patron");
+									}
+									$sql = "SELECT * FROM Client JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
+									$req = mysqli_query($db, $sql);
+									$data = mysqli_fetch_assoc($req);
+									if($data['PER_Id'] != ""){
+										echo("Vous êtes le Client");
+									}
+									$sql = "SELECT * FROM Employer JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
+									$req = mysqli_query($db, $sql);
+									$data = mysqli_fetch_assoc($req);
+									if($data['PER_Id'] != ""){
+										echo("Vous êtes un employer");
+									}
+									$sql = "SELECT * FROM Pizzaiolo JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
+									$req = mysqli_query($db, $sql);
+									$data = mysqli_fetch_assoc($req);
+									if($data['PER_Id'] != ""){
+										echo("Vous êtes le Pizzaiolo");
+									}
 								session_start();
 								$pseudo = $_SESSION['pseudo'];	
 								echo $pseudo;
-								echo 'bienvenue ';
+								echo '<br>bienvenue ';
 
 								}
 							}
