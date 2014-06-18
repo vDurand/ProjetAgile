@@ -14,15 +14,15 @@
 		
 		
 		<form action=".php" method="post">
-		<img src="image/pizza.jpg" height="200" width="1500" />
+		<img src="image/Supreme_pizza.jpg" height="200" width="1500" />
 			
 				<legend></legend> <br/>
 				 <input type="button" value = "Page d'accueil">
-				 <input type="button" value = "Pizzas" href="listPizza.php"> 
+				 <input type="button" value = " pizza"> 
 			
-				<input type="button" value = "Connexion" href="connexion.php"><br></br>
-				<fieldset>
-				<p>RESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIREbr><br></br>
+				<input type="button" value = "connexion"><br></br>
+				<fieldset id="presentation">
+				<p>PRESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIRE><br></br>
 
 LIVRAISON GRATUITE : 00 00 000 0000<br></br>
 
