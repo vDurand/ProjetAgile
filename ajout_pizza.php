@@ -10,7 +10,9 @@
 	</head>
 
 	<body>
-		<h1><a href="home.php">Ajout de pizza</a></h1>
+		<h1>Ajout de pizza</h1>
+		<a id="button" href="home.php">Retour Liste Pizza</a>
+		<br/><br/>
 
 			<form method="post" action="post_pizza.php">
 			<fieldset>

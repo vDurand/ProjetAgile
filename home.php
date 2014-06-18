@@ -11,7 +11,12 @@
 
 	<body>
 		<h1>Pizza</h1>
-		<a id="button" href="ajout_pizza.php">Ajouter une pizza</a>
+		<table>
+			<tr>
+				<td><a id="button" href="ajout_pizza.php">Ajouter une pizza</a></td>
+				<td><a id="button" href="commande.php">Commander une pizza</a></td>
+			</tr>
+		</table>
 		<br/><br/>
 		<div id ="list">
 		<?php
