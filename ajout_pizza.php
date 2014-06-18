@@ -5,17 +5,18 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Gestion de pizza</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 		<!-- IUT Caen - DUT Info (2013-2015) -->
 	</head>
 
 	<body>
-		<h1>Ajout de pizza</h1>
+		<h1 href="home.php">Ajout de pizza</h1>
 
 			<form method="post" action="post_pizza.php">
 			<fieldset>
 			<p>
-			<label for="name">Nom : </label><input required name="name" type="text" id="name" /><br />
-			<label for="price">Prix : </label><input required type="text" name="price" id="price" />
+			<label for="name">Nom : </label><input name="name" type="text" id="name" /><br />
+			<label for="price">Prix : </label><input type="text" name="price" id="price" />
 			</p>
 			</fieldset>
 			<table>
