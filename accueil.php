@@ -3,10 +3,11 @@
 <form>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		
 		<title>PIZZAIOLO</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	</head>
-	<h1 id="pizzaiolo" >PIZZAIOLO</h1>
+	<h1>PIZZAIOLO</h1>
 	<body>
 		
 		</br>
@@ -15,14 +16,11 @@
 		
 		<form action=".php" method="post">
 		<img src="image/pizza.jpg" height="200" width="1500" />
-			
-				<legend></legend> <br/>
-				 <input type="button" value = "Page d'accueil">
-				 <input type="button" value = "Pizzas" href="listPizza.php"> 
-			
-				<input type="button" value = "Connexion" href="connexion.php"><br></br>
-				<fieldset>
-				<p>RESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIREbr><br></br>
+		</br>
+		<a id="listPizza" href="listPizza.php">Liste des pizzas</a>
+		<a id="connexion" href="connexion.php">Connexion</a>
+
+		<p>RESSER, STRESSER, FATIGUER LE PIZZAIOLO EST LA ET SE FERA UNE JOIE DE POUVOIR VOUS SERVIR ET TOUJOURS AVEC LE SOURIRE<br></br>
 
 LIVRAISON GRATUITE : 00 00 000 0000<br></br>
 
