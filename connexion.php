@@ -29,7 +29,7 @@
 		$password = $_POST['password'];
 		
 		$sql="SELECT PER_Pseudo, PER_Mdp FROM Personne WHERE PER_Pseudo='$pseudo'";
-		//echo $sql;
+		
 		
 		$req = mysqli_query($db, $sql); //or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 
@@ -44,7 +44,7 @@
 			{		
 				if(empty($_POST['pseudo'])){
 					
-					echo $message = 'Veuillez indiquer votre Identifiant svp !';}
+					echo $message = 'Veuillez indiquer votre pseudo svp !';}
 				 else// Le mot de passe est-il rempli ?
 				{				
 					if(empty($_POST['password'])){
@@ -55,7 +55,7 @@
 						if($_POST['pseudo'] != $data['PER_Pseudo']){
 						
 
-							echo $message = 'Votre login est fauxxxxxx !';}
+							echo $message = 'Votre login est faux !';}
 						 else// Le mot de passe est-il correct ?
 						{				
 							if($_POST['password']!== $data['PER_Mdp']){
@@ -80,7 +80,7 @@
 								session_start();
 								$pseudo = $_SESSION['pseudo'];	
 								echo $pseudo;
-								echo 'salut';
+								echo 'bienvenue ';
 
 								}
 							}
