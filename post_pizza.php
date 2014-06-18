@@ -21,7 +21,7 @@
 	$name=strtoupper(addslashes($_POST["name"]));
 	$price=($_POST["price"]);
 
-	$query = "INSERT INTO Pizza (PIZ_Nom, PIZ_Prix) VALUES ('$name', '$prix')";
+	$query = "INSERT INTO Pizza (PIZ_Nom, PIZ_Prix) VALUES ('$name', '$price')";
 
   	$sql = mysqli_query($db, $query);
   	$errr=mysqli_error($db);
