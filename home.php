@@ -11,7 +11,7 @@
 
 	<body>
 		<h1>Pizza</h1>
-		<a href="ajout_pizza.php">Ajouter un pizza</a>
+		<a href="ajout_pizza.php">Ajouter une pizza</a>
 		<br/><br/>
 		<?php
 
@@ -26,7 +26,11 @@
 	{
 		?>									>Nom pizza : <?php echo $donnees['PIZ_Nom']; ?>
 			<br/>
-			Prix pizza : <?php echo $donnees['PIZ_Prix']." €"; ?>
+<<<<<<< HEAD
+			Prix pizza : <?php echo $donnees['PIZ_Prix']."€"; ?>
+=======
+			Prix pizza : <?php echo $donnees['PIZ_Prix']; ?>
+>>>>>>> origin/master
 			<br/><br/>
 				        	<?php
 	
