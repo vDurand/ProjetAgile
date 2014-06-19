@@ -129,7 +129,7 @@
 									<label>Quantité :</label>
 								</td>
 								<td>
-									<input id="number" required maxlength="255" name="number[]" type="text" class="inputC"> 
+									<input id="number"   maxlength="255" name="number[]" type="text" class="inputC"> 
 								</td>
 							</tr>
 							</div>
@@ -165,7 +165,7 @@
 									<label>Quantité :</label>
 								</td>
 								<td>
-									<input id="number" required maxlength="255" name="number[]" type="text" class="inputC"> 
+									<input id="number"   maxlength="255" name="number[]" type="text" class="inputC"> 
 								</td>
 							</tr>
 							<tr id="duplicater3" style="display:none">
@@ -199,7 +199,7 @@
 									<label>Quantité :</label>
 								</td>
 								<td>
-									<input id="number" required maxlength="255" name="number[]" type="text" class="inputC"> 
+									<input id="number"   maxlength="255" name="number[]" type="text" class="inputC"> 
 								</td>
 							</tr>
 							<tr id="duplicater5" style="display:none">
@@ -233,7 +233,7 @@
 									<label>Quantité :</label>
 								</td>
 								<td>
-									<input id="number" required maxlength="255" name="number[]" type="text" class="inputC"> 
+									<input id="number"   maxlength="255" name="number[]" type="text" class="inputC"> 
 								</td>
 							</tr>
 							<tr id="duplicater7" style="display:none">
@@ -267,7 +267,7 @@
 									<label>Quantité :</label>
 								</td>
 								<td>
-									<input id="number" required maxlength="255" name="number[]" type="text" class="inputC"> 
+									<input id="number"   maxlength="255" name="number[]" type="text" class="inputC"> 
 								</td>
 							</tr>
 							<!-- END ZONE -->
@@ -282,8 +282,7 @@
 						<tr>
 							<td>
 								<span>
-									<input name="submit" type="submit" value="Ajouter" class="buttonC">&nbsp;&nbsp; 
-									<input name="reset" type="reset" value="Annuler" class="buttonC">
+									<input name="submit" type="submit" value="Ajouter" class="buttonC">
 								</span>
 							</td>
 						</tr>

@@ -12,21 +12,40 @@
 		else
 			echo 'Erreur';
 		
-		$reponse = mysqli_query($db, "SELECT * FROM Agile.Order JOIN Commander USING (COM_Id) JOIN Pizza USING (PIZ_IdPizza) JOIN Client USING(CLI_IdClient) JOIN Personne USING(PER_Id)");
+		$reponse = mysqli_query($db, "SELECT * FROM Agile.Order JOIN Client USING(CLI_IdClient) JOIN Personne USING(PER_Id) ORDER BY ORD_Id DESC");
 		
 		while ($donnees = mysqli_fetch_assoc($reponse))
 		{
-			?>	>Pizza : <?php echo $donnees['PIZ_Nom']; ?>
+			?>	> Client : <?php echo $donnees['PER_Nom']; ?> <?php echo $donnees['PER_Prenom']; ?>
+				<br/><br/>
+				<?php
+				$order = $donnees['ORD_Id'];
+				$reponse2 = mysqli_query($db, "SELECT * FROM Commander JOIN Pizza USING(PIZ_IdPizza) WHERE ORD_Id=$order");
+				
+				$i=0;
+				
+				while ($donnees2 = mysqli_fetch_assoc($reponse2))
+				{
+				 ?>
+				Pizza : <?php echo $donnees2['PIZ_Nom']; ?>
 				<br/>
-				Prix unitaire : <?php echo $donnees['PIZ_Prix']; ?> &euro;
+				Prix unitaire : <?php echo $donnees2['PIZ_Prix']; ?> &euro;
 				<br/>
-				Quantité : <?php echo $donnees['COM_Quantite']; ?>
+				Quantité : <?php echo $donnees2['COM_Quantite']; ?>
 				<br/>
-				Prix total : <?php echo $donnees['COM_Quantite']*$donnees['PIZ_Prix']; ?> &euro;
-				<br/>
-				Client : <?php echo $donnees['PER_Nom']; ?> <?php echo $donnees['PER_Prenom']; ?>
+				Prix total : <?php echo $donnees2['COM_Quantite']*$donnees2['PIZ_Prix']; $totaux[$i]=$donnees2['COM_Quantite']*$donnees2['PIZ_Prix']; $i++;?> &euro;
 				<br/><br/>
 					        	<?php
+					        	}
+					        	$res=0;
+					        for($j=0;$j<$i;$j++) {
+					        	$res+=$totaux[$j];
+					        }
+					        	?>
+					        	Total global : <?php echo $res; ?> &euro;
+					        	<br/><br/><br/>
+					        	<?php
+					        	
 		}
 		mysqli_free_result($reponse);
 		?>				
