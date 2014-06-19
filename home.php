@@ -3,6 +3,7 @@
 ?>
 <div id="corps">
 	<div id = "info">
+		<h1 style="text-align:center;font-style:italic;">Paulo Pizza</h1>
 		<img alt="banniere" src="banniere.jpg" width="90%"/> 
 		<div id="horaires">
 		<h4>Horaires</h4>
