@@ -78,3 +78,62 @@ img {
 .bandeau a:hover{
 	background: #950A0A;
 }
+
+
+pre{
+	font-family: Helvetica;
+	font-size: 12px;
+}
+
+#info{
+	display: block;
+	margin-left : auto;
+	margin-right : auto;
+	width : 90%;
+	border-style: solid;
+	border-radius : 40px;
+	border-width : 1px;
+}
+
+#info img{
+	margin-top : 20px;
+	border-radius : 40px;
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto
+}
+
+#horaires{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-radius : 30px;
+	margin-left : 4%;
+	text-align: center;
+	color: white;
+	display : inline-block;
+	background-color: #CB0707;
+	width : 25%;
+}
+
+#adresse{
+	margin-top: 50px;
+	border-radius : 30px;
+	text-align: center;
+	margin-left : 8%;
+	margin-right : 8%;
+	color: white;
+	display : inline-block;
+	background-color: #CB0707;
+	width : 25%;
+}
+
+#contact{
+	margin-top: 50px;
+	border-radius : 30px;
+	text-align: center;
+	color: white;
+	display : inline-block;
+	background-color: #CB0707;
+	width : 25%;
+	margin-right : 4%;
+}
