@@ -36,7 +36,7 @@
 	        				<li id="champs"><a href="ajout_pizza.php">Ajouter</a></li>
 							<li id="champs"><a href="commande.php">Commander</a></li>
 							<li id="champs"><a href="client.php">Client</a></li>
-							<li id="champs"><a href="stuff.php">Stuff</a></li>
+							<li id="champs"><a href="stuff.php">Connexion</a></li>
 						</ul>	
 					</nav>
 				</div>
