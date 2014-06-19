@@ -13,12 +13,8 @@ body{
 }
 #entete {
 	width: auto;
-	height:100px;
+	height:50px;
 	background: #CB0707;
-}
-
-#navi{
-	vertical-align: middle;
 }
 
 .bandeau, .bandeau ul{
@@ -45,14 +41,10 @@ body{
 	cursor: pointer;
 }
 
-#deco{
-	color: #fff;
-}
-
 #corps{
 	overflow: scroll;
 	width: 950px;
-	height:645px;
+	//height:645px;
 	background-color: #fff;
 	padding-top: 15px;
 	padding-left: 15px;
