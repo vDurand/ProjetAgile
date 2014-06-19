@@ -25,7 +25,9 @@
 
 	<body>
 	<?php
-		if(isset($_SESSION['user']))
+	echo $_SESSION['user'];
+	$user_type = $_SESSION['user'];
+		if(isset($user_type))
 			echo "true";
 		else
 			echo "false";
