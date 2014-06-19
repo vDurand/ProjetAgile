@@ -24,6 +24,8 @@
 	</head>
 
 	<body>
+	<?php
+	?>
 	<div id="wrapper" background-color="white">
 			<div id="entete">
 				<div id="navi">
