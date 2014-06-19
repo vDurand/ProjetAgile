@@ -30,6 +30,7 @@
 		{
 			?>
 				 <?php echo $donnees2['ING_Nom']; ?>
+				 ,
 				 <?php
 				 }
 				 ?>
