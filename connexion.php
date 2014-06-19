@@ -8,6 +8,7 @@
 	</head>
 	
 	<body>
+	<? include('bandeau.php'); ?>
 		<form method="post" action="connexion.php">
 			<fieldset>
 			<legend>Connexion</legend>
@@ -95,7 +96,7 @@
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
 										echo 'Vous allez etre redirigé';
-										header ("Refresh: 2;URL=accueil.php");
+										header ("Refresh: 2;URL=home.php");
 									}
 									$sql = "SELECT * FROM Client JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
@@ -106,7 +107,7 @@
 										$_SESSION['user'] = "Clients";
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
-										header ("Refresh: 2;URL=accueil.php");
+										header ("Refresh: 2;URL=home.php");
 									}
 									$sql = "SELECT * FROM Employer JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
@@ -117,7 +118,7 @@
 										$_SESSION['user'] = "Employer";
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
-										header ("Refresh: 2;URL=accueil.php");
+										header ("Refresh: 2;URL=home.php");
 									}
 									$sql = "SELECT * FROM Pizzaiolo JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
@@ -128,12 +129,12 @@
 										$_SESSION['user'] = "Pizzaiolo";
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
-										header ("Refresh: 2;URL=accueil.php");
+										header ("Refresh: 2;URL=home.php");
 									}
 								session_start();
 								$pseudo = $_SESSION['pseudo'];	
 								echo $pseudo;
-								echo '<br>bienvenue ';
+								
 
 								}
 							}
@@ -142,6 +143,7 @@
 				}
 			}
 	}
+	include('footer.php');
 		?>
 	</body>
 </html>
