@@ -12,7 +12,7 @@
 		else
 			echo 'Erreur';
 		
-		$reponse = mysqli_query($db, "SELECT * FROM Pizza");
+		$reponse = mysqli_query($db, "SELECT * FROM Pizza join Composer using PIZ_IdPizza") ;
 		
 		while ($donnees = mysqli_fetch_assoc($reponse))
 		{
@@ -21,6 +21,7 @@
 				<br/>
 				Prix pizza : <?php echo $donnees['PIZ_Prix']; ?> &euro;
 				<br/>
+				Ingrédients : <?php echo $donnees['ING_IdIngredients']
 				<form method="post" action="modif_pizza.php">
 				<input type="hidden" name="num" value="<?php echo $donnees['PIZ_IdPizza']; ?>">
 				<input type="submit" value="Modifier" />
