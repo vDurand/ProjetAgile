@@ -1,0 +1,4 @@
+patron = lolo / pizza
+pizzaiolo = alex / alex
+employer = toto / toto
+client = bubu / aqwzsxedc
