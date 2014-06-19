@@ -21,6 +21,9 @@ include('bandeau_connexion.php');
 				</tr>
 			</table>
 			
+			<p><b> Vous n'êtes pas inscrit ? <a href="inscription.php">Enregistrez-vous</a></b><p>
+			<br></br>
+			
 		<?php
 		
 	if(!empty($_POST['confirmer']))

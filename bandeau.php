@@ -48,7 +48,8 @@
 							?>
 							<li id="champs"><a href="home.php">Accueil</a></li>
 							<li id="champs"><a href="listPizza.php">Pizzas</a></li>
-							
+							<? /*affiche_pour("Clients", "<li id=champs><a href=listPizza.php>Pizzas</a></li>");*/?>
+							<? affiche_pour("Patron", "<li id=champs><a href=listPizza.php>Pizzas</a></li>");?>
 							<? affiche_pour("Employer", "<li id=champs><a href=commande.php>Commander</a></li>");?>
 							<? affiche_pour("Patron", "<li id=champs><a href=commande.php>Commander</a></li>");?>
 							<? affiche_pour("Clients", "<li id=champs><a href=commandeClient.php>Commander</a></li>");?>
