@@ -35,7 +35,8 @@
 								</td>
 								<td>
 									<div class="selectType">
-			          					<select name="pizza">
+			          					<select name="pizza[]">
+			          						<option value=""></option>
 			          			<?php
 	
 		if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
@@ -63,9 +64,47 @@
 									<label>Quantité :</label>
 								</td>
 								<td>
-									<input id="number" required maxlength="255" name="number" type="text" class="inputC"> 
+									<input id="number" required maxlength="255" name="number[]" type="text" class="inputC"> 
 								</td>
 							</tr>
+							<tr>
+														<td style="text-align: left; width: 150px;">
+															<label>Pizza :</label>
+														</td>
+														<td>
+															<div class="selectType">
+									          					<select name="pizza[]">
+									          						<option value=""></option>
+									          			<?php
+							
+								if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
+									echo '';
+								else
+									echo 'Erreur';
+								
+								$reponse = mysqli_query($db, "SELECT * FROM Pizza ORDER BY PIZ_Nom");
+								while ($donnees = mysqli_fetch_assoc($reponse))
+								{
+									if($donnees['PIZ_Valide']==1){
+									?>
+											        				<option value="<?php echo $donnees['PIZ_IdPizza']; ?>"><?php echo $donnees['PIZ_Nom']; ?>, <?php echo $donnees['PIZ_Prix']; ?> &euro;</option>
+											        	<?php
+											        	}
+								}
+								mysqli_free_result($reponse);
+								?>									
+											    				</select>
+											    			</div>
+											    		</td>
+													</tr>
+													<tr>
+														<td style="text-align: left; width: 150px; white-space: normal;">
+															<label>Quantité :</label>
+														</td>
+														<td>
+															<input id="number" required maxlength="255" name="number[]" type="text" class="inputC"> 
+														</td>
+													</tr>
 							<tr id="Contact-List">
 								<td style="text-align: left; width: 150px; white-space: normal;">
 									<label>Client :</label>
