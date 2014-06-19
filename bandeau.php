@@ -24,14 +24,16 @@
 	</head>
 
 	<body>
-	<?php
-	echo $_SESSION['user'];
-	$user_type = $_SESSION['user'];
-		if(isset($user_type))
-			echo "true";
-		else
-			echo "false";
-	?>
+		<?php
+			session_start();
+			if(isset($_SESSION['user']))
+				echo $_SESSION['nom'];
+				echo $_SESSION['prenom'];
+				if($_SESSION['user'] == "Clients")
+					echo $_SESSION['pts'];
+			else
+				echo "false"
+		?>
 	<div id="wrapper" background-color="white">
 			<div id="entete">
 				<div id="navi">
