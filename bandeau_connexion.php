@@ -32,13 +32,9 @@
 						<a href="home.php"><img id="logo" src="http://vdurand.com/Agile/logo.png" onmouseover="onHover();" onmouseout="offHover();"></a>
 						<ul class="bandeau">
 							<li id="champs"><a href="home.php">Accueil</a></li>
-							<li id="champs"><a href="listPizza.php">Pizza</a></li>
-							<li id="champs"><a href="listComm.php">Commandes</a></li>
-	        				<li id="champs"><a href="ajout_pizza.php">Ajouter</a></li>
-							<li id="champs"><a href="commande.php">Commander</a></li>
-							<li id="champs"><a href="client.php">Client</a></li>
+							<li id="champs"><a href="listPizzaClient.php">Pizzas</a></li>
 							<li id="champs"><a href="connexion.php">Connexion</a></li>
-						</ul>	
+						</ul>
 					</nav>
 				</div>
 			</div>
