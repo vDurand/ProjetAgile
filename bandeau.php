@@ -51,9 +51,11 @@
 							
 							<? affiche_pour("Employer", "<li id=champs><a href=commande.php>Commander</a></li>");?>
 							<? affiche_pour("Patron", "<li id=champs><a href=commande.php>Commander</a></li>");?>
-							<? affiche_pour("Clients", "<li id=champs><a href=commande.php>Commander</a></li>");?>
+							<? affiche_pour("Clients", "<li id=champs><a href=commandeClient.php>Commander</a></li>");?>
 							<?affiche_pour("Patron", "<li id=champs><a href=ajout_pizza.php>Ajouter pizzas</a></li>");?>
 	        				<?affiche_pour("Pizzaiolo", "<li id=champs><a href=listComm.php>Liste commandes</a></li>");?>
+							<? affiche_pour("Employer", "<li id=champs><a href=listComm.php>Liste commandes</a></li>");?>
+							<? affiche_pour("Patron", "<li id=champs><a href=listComm.php>Liste commandes</a></li>");?>
 							<? if(!isset($_SESSION['user'])){?>
 								<li id="champs"><a href="connexion.php">Connexion</a></li>
 								<?}
