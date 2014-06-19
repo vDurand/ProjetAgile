@@ -49,22 +49,21 @@
 							<? if(!isset($_SESSION['user'])){?>
 								<li id="champs"><a href="connexion.php">Connexion</a></li>
 								<?}
-									else 
+								else{?>
+								<li id="champs"><a href="deco.php">Déconnexion</a></li>
+								<?}?>
+						</ul>
+							<?/*else 
 									{
 										?> <li id="champs"><? 
 										echo $_SESSION['nom'];
 										?> <br> <?
 										echo $_SESSION['prenom'];
 										?> <br> <?
-										if($_SESSION['user'] == "Clients"){
-											echo $_SESSION['pts'];
-											}
-											?><br> <a id="deco" href="deco.php">Déconnexion</a><?
-										?></li> <?
+										
 									
-									}
+									}*/
 									?>
-						</ul>	
 					</nav>
 				</div>
 			</div>
