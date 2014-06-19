@@ -51,23 +51,23 @@
 								<td>
 									<div class="selectType">
 							            <select name="client">
-							                  <?php
-		                  if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
-		                  	echo '';
-		                  else
-		                  	echo 'Erreur';
-		                  
-							                  
-							$reponseBis = mysqli_query($db, "SELECT * FROM Client cl JOIN Personne pe ON cl.PER_Id=pe.PER_Id ORDER BY PER_Nom");
-							while ($donneesBis = mysqli_fetch_assoc($reponseBis))
-							{
-								
-							  ?>          <option id="client" value="<?php echo $donneesBis['CLI_IdClient']; ?>"><?php echo strtoupper($donneesBis['PER_Nom']); ?> <?php echo $donneesBis['PER_Prenom']; ?></option>
 							                <?php
-							                
-							}
-							mysqli_free_result($reponseBis);
-							?>                  
+												if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
+													echo '';
+												else
+													echo 'Erreur';
+												  
+																	  
+													$reponseBis = mysqli_query($db, "SELECT * FROM Client cl JOIN Personne pe ON cl.PER_Id=pe.PER_Id ORDER BY PER_Nom");
+													while ($donneesBis = mysqli_fetch_assoc($reponseBis))
+													{
+														
+													  ?>          <option id="client" value="<?php echo $donneesBis['CLI_IdClient']; ?>"><?php echo strtoupper($donneesBis['PER_Nom']); ?> <?php echo $donneesBis['PER_Prenom']; ?></option>
+																	<?php
+																	
+													}
+													mysqli_free_result($reponseBis);
+													?>                  
 							            </select>
 							          </div>
 								</td>

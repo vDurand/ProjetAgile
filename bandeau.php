@@ -40,12 +40,20 @@
 					<nav>
 						<a href="home.php"><img id="logo" src="http://vdurand.com/Agile/logo.png" onmouseover="onHover();" onmouseout="offHover();"></a>
 						<ul class="bandeau">
+							<?php
+								function affiche_pour($user, $bouton){
+									if($_SESSION['user'] == $user)
+										echo $bouton;
+								}
+							?>
 							<li id="champs"><a href="home.php">Accueil</a></li>
-							<li id="champs"><a href="listPizza.php">Pizza</a></li>
-							<li id="champs"><a href="listComm.php">Commandes</a></li>
-	        				<li id="champs"><a href="ajout_pizza.php">Ajouter</a></li>
-							<li id="champs"><a href="commande.php">Commander</a></li>
-							<li id="champs"><a href="client.php">Client</a></li>
+							<li id="champs"><a href="listPizza.php">Pizzas</a></li>
+							
+							<? affiche_pour("Employer", "<li id=champs><a href=commande.php>Commander</a></li>");?>
+							<? affiche_pour("Patron", "<li id=champs><a href=commande.php>Commander</a></li>");?>
+							<? affiche_pour("Clients", "<li id=champs><a href=commande.php>Commander</a></li>");?>
+							<?affiche_pour("Patron", "<li id=champs><a href=ajout_pizza.php>Ajouter pizzas</a></li>");?>
+	        				<?affiche_pour("Pizzaiolo", "<li id=champs><a href=listComm.php>Liste commandes</a></li>");?>
 							<? if(!isset($_SESSION['user'])){?>
 								<li id="champs"><a href="connexion.php">Connexion</a></li>
 								<?}
@@ -53,18 +61,19 @@
 								<li id="champs"><a href="deco.php">Déconnexion</a></li>
 								<?}?>
 						</ul>
-							<?/*else 
-									{
-										?> <li id="champs"><? 
-										echo $_SESSION['nom'];
-										?> <br> <?
-										echo $_SESSION['prenom'];
-										?> <br> <?
-										
-									
-									}*/
-									?>
+						
 					</nav>
+					
 				</div>
 			</div>
+			<!--<div id="info">
+							<? 
+								/*echo $_SESSION['nom'];
+								?> <br> <?
+								echo $_SESSION['prenom'];
+								?> <br> <?
+								if($_SESSION['user'] == "Clients")
+								echo $_SESSION['pts'];*/
+							?>
+						</div>-->
 		</div>
