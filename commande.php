@@ -1,6 +1,28 @@
 <?php  
     include('bandeau.php');
 ?>
+<script language="javascript"> 
+	function showDiv(elem){
+			if(elem.value == 1){
+			 document.getElementById('Contact-1').style.display = "";
+			 document.getElementById('Contact-List').style.display = "none";
+			 document.getElementById('Contact-2').style.display = "";
+			 document.getElementById('client').value = "";
+			 document.getElementById('checker').value = "0";
+			 document.getElementById('exist').value = "0"; 
+			}
+			else{
+			 document.getElementById('Contact-1').style.display = "none";
+			 document.getElementById('Contact-List').style.display = "";
+			 document.getElementById('Contact-2').style.display = "none";
+			 document.getElementById('nomC').value = ""; 
+			 document.getElementById('prenomC').value = ""; 
+			 document.getElementById('checker').value = "1";
+			 document.getElementById('exist').value = "1"; 
+			}
+	}
+</script>
+
 <div id="corps">
 	<h1>Ajouter une Commande</h1>
 	<br/><br/>
@@ -44,7 +66,7 @@
 									<input id="number" required maxlength="255" name="number" type="text" class="inputC"> 
 								</td>
 							</tr>
-							<tr>
+							<tr id="Contact-List">
 								<td style="text-align: left; width: 150px; white-space: normal;">
 									<label>Client :</label>
 								</td>
@@ -56,7 +78,7 @@
 							while ($donneesBis = mysqli_fetch_assoc($reponseBis))
 							{
 								
-							  ?>          <option value="<?php echo $donneesBis['CLI_IdClient']; ?>"><?php echo strtoupper($donneesBis['PER_Nom']); ?> <?php echo $donneesBis['PER_Prenom']; ?></option>
+							  ?>          <option id="client" value="<?php echo $donneesBis['CLI_IdClient']; ?>"><?php echo strtoupper($donneesBis['PER_Nom']); ?> <?php echo $donneesBis['PER_Prenom']; ?></option>
 							                <?php
 							                
 							}
@@ -64,6 +86,31 @@
 							?>                  
 							            </select>
 							          </div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="newC">Nouveau Client : </label>
+								</td>
+								<td>
+									<input id="checker" onclick="showDiv(this)" type="checkbox" name="newC" value="1">
+									<input type="hidden" id="exist" name="exist" value="1">
+								</td>
+							</tr>
+							<tr style="display:none" id="Contact-1">
+								<td>
+									<label>Nom :</label>
+								</td>
+								<td>
+									<input id="nomC" maxlength="255" name="nomC" type="text" class="inputC"> 
+								</td>
+							</tr>
+							<tr style="display:none" id="Contact-2">
+								<td>
+									<label>Prenom :</label>
+								</td>
+								<td>
+									<input id="prenomC" maxlength="255" name="prenomC" type="text" class="inputC"> 
 								</td>
 							</tr>
 						</table>
