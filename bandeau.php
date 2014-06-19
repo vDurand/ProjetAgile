@@ -26,13 +26,13 @@
 	<body>
 		<?php
 			session_start();
-			if(isset($_SESSION['user']))
-				echo $_SESSION['nom'];
+			/*if(isset($_SESSION['user']))
+				/*echo $_SESSION['nom'];
 				echo $_SESSION['prenom'];
 				if($_SESSION['user'] == "Clients")
-					echo $_SESSION['pts'];
+					//echo $_SESSION['pts'];
 			else
-				echo "false"
+				echo "false"*/
 		?>
 	<div id="wrapper" background-color="white">
 			<div id="entete">
@@ -46,7 +46,23 @@
 	        				<li id="champs"><a href="ajout_pizza.php">Ajouter</a></li>
 							<li id="champs"><a href="commande.php">Commander</a></li>
 							<li id="champs"><a href="client.php">Client</a></li>
-							<li id="champs"><a href="connexion.php">Connexion</a></li>
+							<? if(!isset($_SESSION['user'])){?>
+								<li id="champs"><a href="connexion.php">Connexion</a></li>
+								<?}
+									else 
+									{
+										?> <li id="champs"><? 
+										echo $_SESSION['nom'];
+										?> <br> <?
+										echo $_SESSION['prenom'];
+										?> <br> <?
+										if($_SESSION['user'] == "Clients"){
+											echo $_SESSION['pts'];
+											}
+										?></li> <?
+									
+									}
+									?>
 						</ul>	
 					</nav>
 				</div>
