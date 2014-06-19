@@ -17,7 +17,8 @@
 		while ($donnees = mysqli_fetch_assoc($reponse))
 		{
 			if($donnees['PIZ_Valide']==1){
-			?>	>Nom pizza : <?php echo $donnees['PIZ_Nom']; ?>
+			?>	<fieldset style="margin-top:1%;">
+				<legend  align="left">Nom pizza : <?php echo $donnees['PIZ_Nom']; ?></legend>
 				<br/>
 				Prix pizza : <?php echo $donnees['PIZ_Prix']; ?> &euro;
 				<br/>
@@ -42,7 +43,9 @@
 				<br/><br/>
 					        	<?php
 			}
+			?></fieldset><?
 		}
+		
 		mysqli_free_result($reponse);
 		?>				</div>		
 </div>

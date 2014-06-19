@@ -16,7 +16,8 @@
 		
 		while ($donnees = mysqli_fetch_assoc($reponse))
 		{
-			?>	> Client : <?php echo $donnees['PER_Nom']; ?> <?php echo $donnees['PER_Prenom']; ?>
+			?><fieldset style="margin-top:1%;">
+				<legend  align="left"> Client : <?php echo $donnees['PER_Nom']; ?> <?php echo $donnees['PER_Prenom']; ?></legend>
 				<br/><br/>
 				<?php
 				$order = $donnees['ORD_Id'];
@@ -42,9 +43,10 @@
 					        	$res+=$totaux[$j];
 					        }
 					        	?>
-					        	Total global : <?php echo $res; ?> &euro;
+					        	<b>Total global : <?php echo $res; ?> &euro;</b>
 					        	<br/><br/><br/>
 					        	<?php
+			?></fieldset><?
 					        	
 		}
 		mysqli_free_result($reponse);
