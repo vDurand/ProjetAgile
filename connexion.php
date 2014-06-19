@@ -7,7 +7,7 @@ include('bandeau_connexion.php');
 			<legend>Connexion</legend>
 			<p>
 				<label for="pseudo">Pseudo : </label><input name="pseudo" type="text" id="pseudo" /><br />
-				<label for="password">Mot de Passe : </label><input type="text" name="password" id="password" />
+				<label for="password">Mot de Passe : </label><input type="password" name="password" id="password" />
 			</p>
 			
 			<table>
