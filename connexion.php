@@ -1,15 +1,6 @@
-<html>
-	
-	<head>
-	
-		<!--<meta http-equiv="refresh" content="2;home.php" />-->
-		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="index.css"/>
-		
-	</head>
-	
-	<body>
-	<? include('bandeau_connexion.php'); ?>
+<? 
+include('bandeau_connexion.php');
+?>
 	<div id="corps">
 		<form method="post" action="connexion.php">
 			<fieldset>
@@ -153,11 +144,13 @@
 			}
 	}
 	
-		?></fieldset>
-		<?
-		include('footer.php');
-		?>
-		</form>
-	</div>
-	</body>
+	?>
+	</fieldset>
+</div>
+<?
+	include('footer.php');
+?>
+</form>
+	
+</body>
 </html>
