@@ -64,8 +64,6 @@
 			  		$reponse3 = mysqli_query($db, "SELECT COM_Id FROM Commander WHERE PIZ_IdPizza='$pizza' AND COM_Quantite='$number' ORDER BY COM_Id DESC LIMIT 1");
 			  		$donnees3 = mysqli_fetch_assoc($reponse3);
 			  		$numI=$donnees3['COM_Id'];
-			  		echo $client;
-			  		echo $numI;
 			  		$queryTres = "INSERT INTO `Agile`.`Order` (`CLI_IdClient`, `COM_Id`, `ORD_Id`) VALUES ($client, $numI, NULL)";
 			  		
 			  		  	$sqlTres = mysqli_query($db, $queryTres);
