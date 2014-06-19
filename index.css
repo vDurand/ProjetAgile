@@ -15,6 +15,7 @@ body{
 	width: auto;
 	height:100px;
 	background: #CB0707;
+	vertical-align: center;
 }
 
 .bandeau, .bandeau ul{
