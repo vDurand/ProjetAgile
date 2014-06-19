@@ -4,13 +4,15 @@
 	
 		<!--<meta http-equiv="refresh" content="2;home.php" />-->
 		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="index.css"/>
 		
 	</head>
 	
 	<body>
-	<? include('bandeau.php'); ?>
+	<? include('bandeau_connexion.php'); ?>
+	<div id="corps">
 		<form method="post" action="connexion.php">
-			<fieldset style="margin-left:15%; width:68%;">
+			<fieldset>
 			<legend>Connexion</legend>
 			<p>
 				<label for="pseudo">Pseudo : </label><input name="pseudo" type="text" id="pseudo" /><br />
@@ -112,6 +114,7 @@
 										$_SESSION['user'] = "Clients";
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
+										$_SESSION['pts'] = $data['CLI_NbPts'];
 										header ("Refresh: 2;URL=home.php");
 									}
 									$sql = "SELECT * FROM Employer JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
@@ -123,7 +126,7 @@
 										$_SESSION['user'] = "Employer";
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
-										$_SESSION['pts'] = $data['CLI_NbPts'];
+										
 										header ("Refresh: 2;URL=home.php");
 									}
 									$sql = "SELECT * FROM Pizzaiolo JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
@@ -149,9 +152,12 @@
 				}
 			}
 	}
-	include('footer.php');
+	
+		?></fieldset>
+		<?
+		include('footer.php');
 		?>
-		</fieldset>
 		</form>
+	</div>
 	</body>
 </html>
