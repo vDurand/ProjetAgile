@@ -1,4 +1,12 @@
 <html>
+	
+	<head>
+	
+		<!--<meta http-equiv="refresh" content="2;home.php" />-->
+		<meta charset="utf-8" />
+		
+	</head>
+	
 	<body>
 		<form method="post" action="connexion.php">
 			<fieldset>
@@ -81,9 +89,13 @@
 									$req = mysqli_query($db, $sql);
 									$data = mysqli_fetch_assoc($req);
 									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un patron
-										echo("Vous êtes le patron");
+									echo("Vous êtes le patron");	?> &nbsp <? 
 										session_start();
-										$_SESSION['user'] = "patron";
+										$_SESSION['user'] = "Patron";
+										$_SESSION['nom'] = $data['PER_Nom'];
+										$_SESSION['prenom'] = $data['PER_Prenom'];
+										echo 'Vous allez etre redirigé';
+										header ("Refresh: 2;URL=accueil.php");
 									}
 									$sql = "SELECT * FROM Client JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
@@ -91,7 +103,10 @@
 									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un client
 										echo("Vous êtes le Client");
 										session_start();
-										$_SESSION['user'] = "client";
+										$_SESSION['user'] = "Clients";
+										$_SESSION['nom'] = $data['PER_Nom'];
+										$_SESSION['prenom'] = $data['PER_Prenom'];
+										header ("Refresh: 2;URL=accueil.php");
 									}
 									$sql = "SELECT * FROM Employer JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
@@ -99,7 +114,10 @@
 									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un employer
 										echo("Vous êtes un employer");
 										session_start();
-										$_SESSION['user'] = "employer";
+										$_SESSION['user'] = "Employer";
+										$_SESSION['nom'] = $data['PER_Nom'];
+										$_SESSION['prenom'] = $data['PER_Prenom'];
+										header ("Refresh: 2;URL=accueil.php");
 									}
 									$sql = "SELECT * FROM Pizzaiolo JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
 									$req = mysqli_query($db, $sql);
@@ -107,7 +125,10 @@
 									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un pizzaiolo
 										echo("Vous êtes le Pizzaiolo");
 										session_start();
-										$_SESSION['user'] = "pizzaiolo";
+										$_SESSION['user'] = "Pizzaiolo";
+										$_SESSION['nom'] = $data['PER_Nom'];
+										$_SESSION['prenom'] = $data['PER_Prenom'];
+										header ("Refresh: 2;URL=accueil.php");
 									}
 								session_start();
 								$pseudo = $_SESSION['pseudo'];	
