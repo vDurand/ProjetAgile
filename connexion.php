@@ -123,6 +123,7 @@
 										$_SESSION['user'] = "Employer";
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
+										$_SESSION['pts'] = $data['CLI_NbPts'];
 										header ("Refresh: 2;URL=home.php");
 									}
 									$sql = "SELECT * FROM Pizzaiolo JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
