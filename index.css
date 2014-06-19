@@ -18,7 +18,7 @@ body{
 }
 
 #navi{
-	vertical-align: center;
+	vertical-align: middle;
 }
 
 .bandeau, .bandeau ul{
@@ -46,7 +46,6 @@ body{
 }
 
 #deco{
-	display: block;
 	color: #fff;
 }
 
