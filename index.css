@@ -45,7 +45,7 @@ body{
 	cursor: pointer;
 }
 
-.bandeau a#deco{
+#deco{
 	display: block;
 	color: #fff;
 }
