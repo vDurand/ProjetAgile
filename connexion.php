@@ -10,19 +10,24 @@
 	<body>
 	<? include('bandeau.php'); ?>
 		<form method="post" action="connexion.php">
-			<fieldset>
+			<fieldset style="margin-left:15%; width:68%;">
 			<legend>Connexion</legend>
 			<p>
-			<label for="pseudo">Pseudo : </label><input name="pseudo" type="text" id="pseudo" /><br />
-			<label for="password">Mot de Passe : </label><input type="text" name="password" id="password" />
+				<label for="pseudo">Pseudo : </label><input name="pseudo" type="text" id="pseudo" /><br />
+				<label for="password">Mot de Passe : </label><input type="text" name="password" id="password" />
 			</p>
-			</fieldset>
+			
 			<table>
-			<tr><td><input type="submit" name="confirmer" value="Connexion" /></td>
-			<td><input type="reset" value="Reset"></td></tr></table></form>
-			</div>
-			</body>
-			</html>
+				<tr>
+					<td>
+						<input type="submit" name="confirmer" value="Connexion" />
+					</td>
+					<td>
+						<input type="reset" value="Reset">
+					</td>
+				</tr>
+			</table>
+			
 		<?php
 		
 	if(!empty($_POST['confirmer']))
@@ -145,5 +150,7 @@
 	}
 	include('footer.php');
 		?>
+		</fieldset>
+		</form>
 	</body>
 </html>
