@@ -33,38 +33,53 @@
 					$donnees2 = mysqli_fetch_assoc($reponse2);
 					$numC=$donnees2['CLI_IdClient'];
 					
-					$query3 = "INSERT INTO Commander (CLI_IdClient, PIZ_IdPizza, COM_Quantite) VALUES ('$numC', '$pizza', '$number')";
+					$query3 = "INSERT INTO Commander (PIZ_IdPizza, COM_Quantite) VALUES ('$pizza', '$number')";
 					$sql3 = mysqli_query($db, $query3);
 					$errr3=mysqli_error($db);
 					if($sql3){
-					        echo '<div id="good">
-					        	<label>Client ajouté avec succès</label>     
-					            <label>Pizza commandée avec succès</label>
-					            </div>';
+					    $reponse3 = mysqli_query($db, "SELECT COM_Id FROM Commander WHERE PIZ_IdPizza='$pizza' AND COM_Quantite='$number' ORDER BY COM_Id DESC LIMIT 1");
+					    $donnees3 = mysqli_fetch_assoc($reponse3);
+					    $numI=$donnees3['COM_Id'];
+					    
+					    $queryBis = "INSERT INTO `Agile`.`Order` (`CLI_IdClient`, `COM_Id`, `ORD_Id`) VALUES ($numC, $numI, NULL)";
+					    
+					      	$sqlBis = mysqli_query($db, $queryBis);
+					      	$errrBis=mysqli_error($db);
+					      	if ($sqlBis) {
+					      		echo '<div id="good">     
+					      		    <label>Pizza commandée avec succès</label>
+					      		    </div>';
+					      	}
 					}
 				}
 			}
 		}
 		else {
-			$query = "INSERT INTO Commander (CLI_IdClient, PIZ_IdPizza, COM_Quantite) VALUES ('$client', '$pizza', '$number')";
+			$query = "INSERT INTO Commander (PIZ_IdPizza, COM_Quantite) VALUES ('$pizza', '$number')";
 			
 			  	$sql = mysqli_query($db, $query);
 			  	$errr=mysqli_error($db);
 			
 			  	if($sql){
-				        echo '<div id="good">     
-				            <label>Pizza commandée avec succès</label>
-				            </div>';
+			  		$reponse3 = mysqli_query($db, "SELECT COM_Id FROM Commander WHERE PIZ_IdPizza='$pizza' AND COM_Quantite='$number' ORDER BY COM_Id DESC LIMIT 1");
+			  		$donnees3 = mysqli_fetch_assoc($reponse3);
+			  		$numI=$donnees3['COM_Id'];
+			  		echo $client;
+			  		echo $numI;
+			  		$queryTres = "INSERT INTO `Agile`.`Order` (`CLI_IdClient`, `COM_Id`, `ORD_Id`) VALUES ($client, $numI, NULL)";
+			  		
+			  		  	$sqlTres = mysqli_query($db, $queryTres);
+			  		  	$errrTres=mysqli_error($db);
+			  		  	if ($sqlTres) {
+			  		  		echo '<div id="good">     
+			  		  		    <label>Pizza commandée avec succès</label>
+			  		  		    </div>';
+			  		 	}
+			  		  	
 				}
 		}
 		
-			?>									
-				<br/><br/>
-					        	<?php
-		
-		
-		mysqli_free_result($reponse);
-		?>
+			?>
 </div>
 <?php  
   include('footer.php');
