@@ -48,15 +48,19 @@
 							?>
 							<li id="champs"><a href="home.php">Accueil</a></li>
 							<!--<li id="champs"><a href="listPizza.php">Pizzas</a></li>-->
+							<!--Pizza-->
 							<? affiche_pour("Clients", "<li id=champs><a href=listPizzaClient.php>Pizzas</a></li>");?>
 							<? if (($_SESSION['user']=="Clients")|| ($_SESSION['user']=="")) {
 								affiche_pour("", "<li id=champs><a href=listPizzaClient.php>Pizzas</a></li>");
 							}?>
 							<? affiche_pour("Patron", "<li id=champs><a href=listPizza.php>Pizzas</a></li>");?>
+							<!--Commander-->
 							<? affiche_pour("Employer", "<li id=champs><a href=commande.php>Commander</a></li>");?>
 							<? affiche_pour("Patron", "<li id=champs><a href=commande.php>Commander</a></li>");?>
 							<? affiche_pour("Clients", "<li id=champs><a href=commandeClient.php>Commander</a></li>");?>
+							<!--Ajouter pizzas-->
 							<?affiche_pour("Patron", "<li id=champs><a href=ajout_pizza.php>Ajouter pizzas</a></li>");?>
+							<!--Liste commandes-->
 	        				<?affiche_pour("Pizzaiolo", "<li id=champs><a href=listComm2.php>Liste commandes</a></li>");?>
 							<? affiche_pour("Employer", "<li id=champs><a href=listComm.php>Liste commandes</a></li>");?>
 							<? affiche_pour("Patron", "<li id=champs><a href=listComm.php>Liste commandes</a></li>");?>
