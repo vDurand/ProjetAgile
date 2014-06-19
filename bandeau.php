@@ -25,6 +25,10 @@
 
 	<body>
 	<?php
+		if(isset($_SESSION['user']))
+			echo "true";
+		else
+			echo "false";
 	?>
 	<div id="wrapper" background-color="white">
 			<div id="entete">
