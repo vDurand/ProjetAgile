@@ -41,6 +41,17 @@ body{
 	cursor: pointer;
 }
 
+#champs{
+	font-style:italic;
+	display: block;
+	padding: 14px 27px;
+	color: #fff;
+	font-size: 1.01em;
+	background-color:#CB0707;
+	text-decoration: none;
+	cursor: pointer;
+}
+
 #corps{
 	overflow: scroll;
 	width: 950px;
