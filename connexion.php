@@ -109,6 +109,7 @@ include('bandeau_connexion.php');
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
 										$_SESSION['pts'] = $data['CLI_NbPts'];
+										echo 'Vous allez etre redirigé';
 										header ("Refresh: 2;URL=home.php");
 									}
 									$sql = "SELECT * FROM Employer JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
@@ -120,7 +121,7 @@ include('bandeau_connexion.php');
 										$_SESSION['user'] = "Employer";
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
-										
+										echo 'Vous allez etre redirigé';
 										header ("Refresh: 2;URL=home.php");
 									}
 									$sql = "SELECT * FROM Pizzaiolo JOIN Personne USING(PER_Id) WHERE PER_Pseudo='$pseudo'";
@@ -132,6 +133,7 @@ include('bandeau_connexion.php');
 										$_SESSION['user'] = "Pizzaiolo";
 										$_SESSION['nom'] = $data['PER_Nom'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
+										echo 'Vous allez etre redirigé';
 										header ("Refresh: 2;URL=home.php");
 									}
 								session_start();
