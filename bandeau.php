@@ -59,6 +59,7 @@
 										if($_SESSION['user'] == "Clients"){
 											echo $_SESSION['pts'];
 											}
+											?><br> <a id="deco" href="deco.php">Déconnexion</a><?
 										?></li> <?
 									
 									}
