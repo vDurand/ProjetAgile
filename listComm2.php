@@ -19,28 +19,27 @@
 			?> 
 			<fieldset style="margin-top:1%;">
 				<legend  align="left"> Client : <?php echo $donnees['PER_Nom']; ?> <?php echo $donnees['PER_Prenom']; ?></legend>
-					<br/><br/>
-					<?php
+					<br/>
+					<br/>
+				<?php
 					$order = $donnees['ORD_Id'];
 					$reponse2 = mysqli_query($db, "SELECT * FROM Commander JOIN Pizza USING(PIZ_IdPizza) WHERE ORD_Id=$order");
-					
+				
 					$i=0;
-					
+				
 					while ($donnees2 = mysqli_fetch_assoc($reponse2))
-					{
-					 ?>
-					Pizza : <?php echo $donnees2['PIZ_Nom']; ?>
-					<br/>
-					Quantité : <?php echo $donnees2['COM_Quantite']; ?>
-					<br/>
-									<?php
-									}
-									?>
-									
-									<br/><br/>
+					{?>
+						Pizza : <?php echo $donnees2['PIZ_Nom']; ?>
+						<br/>
+						Quantité : <?php echo $donnees2['COM_Quantite']; ?>
+						<br/>
+					<?php
+					}
+					?>
+								
+					<br/><br/>
 			</fieldset>
-									<?php 	
-									
+		<?php 										
 		}
 		mysqli_free_result($reponse);
 		?>	
