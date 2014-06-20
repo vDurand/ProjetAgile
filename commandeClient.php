@@ -57,7 +57,7 @@
 												else
 													echo 'Erreur';
 													
-												$sql = "SELECT * FROM Personne WHERE PER_Pseudo = '$pseudo' AND PER_Mdp = '$password'";
+												$sql = "SELECT * FROM Personne WHERE PER_Nom = $_SESSION[nom] AND PER_Prenom = $_SESSION[prenom]";
 												$req = mysqli_query($db, $sql);
 												$data = mysqli_fetch_assoc($req);	
 												  ?>          

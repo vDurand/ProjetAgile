@@ -59,7 +59,7 @@
 							<!--Commander-->
 							<? affiche_pour("Employer", "<li id=champs><a href=commande.php>Commander</a></li>");?>
 							<? affiche_pour("Patron", "<li id=champs><a href=commande.php>Commander</a></li>");?>
-							<? affiche_pour("Clients", "<li id=champs><a href=commandeClient2.php>Commander</a></li>");?>
+							<? affiche_pour("Clients", "<li id=champs><a href=commandeClient.php>Commander</a></li>");?>
 							<!--Ajouter pizzas-->
 							<?affiche_pour("Patron", "<li id=champs><a href=ajout_pizza.php>Ajouter pizzas</a></li>");?>
 							<!--Liste commandes-->

@@ -63,7 +63,8 @@
 		   }
 		}
 		   
-		   		   else {
+		   		   /* NE PAS DECOMMENTER
+				   else {
 		   	$queryTres = "INSERT INTO `Agile`.`Order` (`CLI_IdClient`, `ORD_Id`) VALUES ($client, $numI, $clef)";
 		   
 		   	$query = "INSERT INTO Commander (PIZ_IdPizza, COM_Quantite) VALUES ('$pizza', '$number')";
@@ -91,7 +92,7 @@
 		   		}
 		   }
 		   
-		
+		*/
 				
 			?>
 </div>
