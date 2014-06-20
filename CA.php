@@ -1,6 +1,7 @@
 <?php  
     include('bandeau.php');
 ?>
+<div id="change"></div>
 <div id="corps">
 	<h1>Chiffre d'affaire :</h1>
 <?php
@@ -16,6 +17,7 @@ if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/s
 		}
 ?>
 </div>
+<script>document.getElementById('change').innerHTML('15 euros');</script>
 <?php  
   include('footer.php');
 ?>
