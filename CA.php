@@ -8,11 +8,11 @@ if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/s
 			echo '';
 		else
 			echo 'Erreur';
-		$sql="SELECT date(ORD_Fin) FROM `Order` WHERE ORD_Fin != '' order by date(ORD_Fin) asc;";
+		$sql="SELECT DISTINCT date(ORD_Fin) FROM `Order` WHERE ORD_Fin != '' order by date(ORD_Fin) asc;";
 		$req = mysqli_query($db, $sql); //or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 		while($data = mysqli_fetch_assoc($req)){
 			if($data['date(ORD_Fin)'] != "0000-00-00")
-				echo $data['date(ORD_Fin)']."<br>";
+				echo "Chiffre d'affaire du: ".$data['date(ORD_Fin)']." =<br>";
 		}
 ?>
 </div>
