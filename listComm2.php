@@ -12,7 +12,19 @@
 		else
 			echo 'Erreur';
 		
+		$orderIdd=addslashes($_POST["orderId"]);	
+		if ($orderIdd!="") {
+			$query1 = "UPDATE `Agile`.`Order` SET `ORD_Pret` = '1' WHERE `Order`.`ORD_Id` = $orderIdd;";
+			$sql1 = mysqli_query($db, $query1);
+			$errr1=mysqli_error($db);
+			if ($sql1) {
+				echo "Commande prête";
+			}
+		}
+		
 		$reponse = mysqli_query($db, "SELECT * FROM Agile.Order JOIN Client USING(CLI_IdClient) JOIN Personne USING(PER_Id) ORDER BY ORD_Id ASC");
+		
+		
 		
 		while ($donnees = mysqli_fetch_assoc($reponse))
 		{
@@ -36,10 +48,43 @@
 						
 						
 						
+						
 					<?php				
 					}
 					?>
-
+					<br>
+					<i>Etat : 
+					        	<?php
+					        	if ($donnees['ORD_Paid']==1&&$donnees['ORD_Pret']!=1) {
+					        		?> Payée 
+									
+									<form method="post" action="">
+					        		<input type="hidden" name="orderId" value="<?php echo $donnees['ORD_Id']; ?>">
+					        		<input type="submit" value="Prêt" />
+					        		</form>
+					        		</br><?
+					        	}
+					        	elseif ($donnees['ORD_Pret']==1&&$donnees['ORD_Paid']!=1) {
+					        	?>
+					        		Prete
+					        		
+					        	<?php
+					        	}
+					        	elseif ($donnees['ORD_Pret']==1&&$donnees['ORD_Paid']==1) {
+					        		echo "Prete et Payée</br>";
+					        	}
+					        	else {
+					        	?>
+					        		En attente
+					        		<form method="post" action="">
+					        		<input type="hidden" name="orderId" value="<?php echo $donnees['ORD_Id']; ?>">
+					        		<input type="submit" value="Prêt" />
+					        		</form>
+					        		
+					        	<?php
+					        	}
+			?></i>
+					
 					<br/><br/>
 			</fieldset>
 		<?php
