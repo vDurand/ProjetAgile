@@ -103,7 +103,7 @@ include('bandeau_connexion.php');
 									$req = mysqli_query($db, $sql);
 									$data = mysqli_fetch_assoc($req);
 									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un client
-										echo("Vous êtes le Client");
+										echo("Vous êtes le Client"); ?> &nbsp <?
 										session_start();
 										$_SESSION['user'] = "Clients";
 										$_SESSION['nom'] = $data['PER_Nom'];
@@ -116,7 +116,7 @@ include('bandeau_connexion.php');
 									$req = mysqli_query($db, $sql);
 									$data = mysqli_fetch_assoc($req);
 									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un employer
-										echo("Vous êtes un employer");
+										echo("Vous êtes un employé"); ?> &nbsp <?
 										session_start();
 										$_SESSION['user'] = "Employer";
 										$_SESSION['nom'] = $data['PER_Nom'];
@@ -128,7 +128,7 @@ include('bandeau_connexion.php');
 									$req = mysqli_query($db, $sql);
 									$data = mysqli_fetch_assoc($req);
 									if($data['PER_Id'] != ""){//verifie si l'utilisateur est un pizzaiolo
-										echo("Vous êtes le Pizzaiolo");
+										echo("Vous êtes le Pizzaiolo"); ?> &nbsp <?
 										session_start();
 										$_SESSION['user'] = "Pizzaiolo";
 										$_SESSION['nom'] = $data['PER_Nom'];
