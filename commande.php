@@ -41,7 +41,7 @@
 <div id="corps">
 	<h1>Ajouter une Commande</h1>
 	<br/><br/>
-				<form method="post" action="commandePost.php" name="commande" formtype="1" colvalue="2">
+				<form method="post" action="commandePost.php" id="usrform" name="commande" formtype="1" colvalue="2">
 					<div id="labelCat">
 						<table>
 							<tr id="Contact-List">
@@ -273,6 +273,14 @@
 							<!-- END ZONE -->
 							<tr>
 								<td><input type="button" value="+" onclick="duplicate()"></td>
+							</tr>
+							<tr>
+								<td><label>Note :</label></td>
+								<td><textarea name="comment"></textarea></td>
+							</tr>
+							<tr>
+								<td><label>Date voulue :</label></td>
+								<td><input maxlength="255" name="datt" type="datetime-local" class="inputC"></td>
 							</tr>
 						</table>
 					</div>

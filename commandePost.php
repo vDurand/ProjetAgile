@@ -20,7 +20,10 @@
 		$client=addslashes($_POST["client"]);
 		$nom=addslashes($_POST["nomC"]);
 		$prenom=addslashes($_POST["prenomC"]);
-		//$note=addslashes($_POST["comment"]);
+		$note=addslashes($_POST["comment"]);
+		$datt=addslashes($_POST["datt"]);
+		date_default_timezone_set('France/Paris');
+		$dateNow = date('Y-m-d H:i:s', strtotime('+2 hours'));
 		
 		if ($exist=="0") {
 			$query1 = "INSERT INTO Personne (PER_Nom, PER_Prenom) VALUES ('$nom', '$prenom')";
@@ -42,15 +45,15 @@
 			}
 		}
 		
-		$queryTres = "INSERT INTO Agile.Order (CLI_IdClient) VALUES ($client)";
+		$queryTres = "INSERT INTO Agile.Order (CLI_IdClient, ORD_Note, ORD_Fin, ORD_Debut) VALUES ($client, '$note', '$datt', '$dateNow')";
 		$sqlTres = mysqli_query($db, $queryTres);
 		$errrTres=mysqli_error($db);
 		if ($sqlTres) {
 			$reponse4 = mysqli_query($db, "SELECT ORD_Id FROM Agile.Order WHERE CLI_IdClient='$client' ORDER BY ORD_Id DESC LIMIT 1");
 			$donnees4 = mysqli_fetch_assoc($reponse4);
-			echo $client;
+			//echo $client;
 			$clef=$donnees4['ORD_Id'];
-			echo $clef;
+			//echo $clef;
 		}
 		
 		

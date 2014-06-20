@@ -61,6 +61,13 @@
 					Note : <?php echo $donnees['ORD_Note']; ?>
 					<?php } ?>
 					<br>
+					Date voulue : <?php if ($donnees['ORD_Fin']=="0000-00-00 00:00:00"||$donnees['ORD_Fin']=="") {
+						echo "Non definie";
+					} 
+					else {
+						echo ($donnees['ORD_Fin']);
+					} ?>
+					<br />
 					<i>Etat : 
 					        	<?php
 					        	if ($donnees['ORD_Paid']==1) {

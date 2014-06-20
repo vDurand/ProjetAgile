@@ -107,6 +107,7 @@ include('bandeau_connexion.php');
 										session_start();
 										$_SESSION['user'] = "Clients";
 										$_SESSION['nom'] = $data['PER_Nom'];
+										$_SESSION['id'] = $data['PER_Id'];
 										$_SESSION['prenom'] = $data['PER_Prenom'];
 										$_SESSION['pts'] = $data['CLI_NbPts'];
 										echo 'Vous allez etre redirigé';

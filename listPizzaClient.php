@@ -18,6 +18,7 @@
 		{
 			if($donnees['PIZ_Valide']==1){
 			?>	<fieldset style="margin-top:1%;">
+				<img src="<?php echo $donnees['PIZ_Image']; ?>" alt="pic" style="width: 80px; float: left; padding-right: 20px;" />
 				<legend  align="left">Nom pizza : <?php echo $donnees['PIZ_Nom']; ?></legend>
 				<br/>
 				Prix pizza : <?php echo $donnees['PIZ_Prix']; ?> &euro;

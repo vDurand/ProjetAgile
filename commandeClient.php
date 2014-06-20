@@ -245,6 +245,14 @@
 							<tr>
 								<td><input type="button" value="+" onclick="duplicate()"></td>
 							</tr>
+							<tr>
+								<td><label>Note :</label></td>
+								<td><textarea name="comment"></textarea></td>
+							</tr>
+							<tr>
+								<td><label>Date voulue :</label></td>
+								<td><input maxlength="255" name="datt" type="datetime-local" class="inputC"></td>
+							</tr>
 						</table>
 					</div>
 					<br/>

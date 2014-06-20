@@ -6,6 +6,15 @@
 	<br/><br/>
 			<div id ="list">
 			<?php
+			
+			function dater($str){
+				$formatDate = "d / m / Y";
+				$result = "";
+				if($str!="")
+					$result = date($formatDate, strtotime($str));
+				return $result;
+			}
+		$compteur=1;	
 	
 		if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/sds1/home/alx22/private/mysql/socket'))
 			echo '';
@@ -46,7 +55,7 @@
 				<br/>
 				Prix unitaire : <?php echo $donnees2['PIZ_Prix']; ?> &euro;
 				<br/>
-				Quantité : <?php echo $donnees2['COM_Quantite']; ?>
+				Quantité : <?php echo $donnees2['COM_Quantite']; $compteur+=$donnees2['COM_Quantite']; ?>
 				<br/>
 				Prix total : <?php echo $donnees2['COM_Quantite']*$donnees2['PIZ_Prix']; $totaux[$i]=$donnees2['COM_Quantite']*$donnees2['PIZ_Prix']; $i++;?> &euro;
 				<br/><br/>
@@ -69,6 +78,20 @@
 					<?php } ?>
 
 					        	<br/>
+					        	Date voulue : <?php if ($donnees['ORD_Fin']=="0000-00-00 00:00:00"||$donnees['ORD_Fin']=="") {
+					        		echo "Non definie";
+					        	} 
+					        	else {
+					        		echo ($donnees['ORD_Fin']);
+					        	} ?>
+					        	<br />
+					        	Livraison dans : <?php
+					        	
+					        	echo $compteur*5;
+					        	echo " min";
+					        	
+					        	 ?>
+					        	 <br />
 					        	<i>Etat : 
 					        	<?php
 
