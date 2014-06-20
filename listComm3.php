@@ -29,7 +29,7 @@
 				while ($donnees2 = mysqli_fetch_assoc($reponse2))
 				{
 				 ?>
-				Pizza : <?php echo $donnees2['PIZ_Nom']; ?>
+				<u>Pizza : <?php echo $donnees2['PIZ_Nom']; ?></u>
 				<br/>
 				Prix unitaire : <?php echo $donnees2['PIZ_Prix']; ?> &euro;
 				<br/>
