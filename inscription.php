@@ -50,11 +50,11 @@
 						$sql3 = "INSERT INTO `Agile`.`Client` (`CLI_IdClient`, `CLI_NbPts`, `PER_Id`) VALUES (NULL, '0', '$id')";
 						$req = mysqli_query($db, $sql3);
 						
-						session_start();
-						$_SESSION['user'] = "Clients";
-						$_SESSION['nom'] = $nom;
-						$_SESSION['prenom'] = $prenom;
-						$_SESSION['pts'] = '0';
+						//session_start();
+						//$_SESSION['user'] = "Clients";
+						//$_SESSION['nom'] = $nom;
+						//$_SESSION['prenom'] = $prenom;
+						//$_SESSION['pts'] = '0';
 				
 						echo "Vous êtes bien inscrit, veuillez patientez vous allez  être redirigé.";
 						header ("Refresh: 2;URL=home.php");

@@ -33,6 +33,8 @@
 					//echo $_SESSION['pts'];
 			else
 				echo "false"*/
+				
+
 		?>
 	<div id="wrapper" background-color="white">
 			<div id="entete">
@@ -63,7 +65,7 @@
 							<!--Liste commandes-->
 	        				<?affiche_pour("Pizzaiolo", "<li id=champs><a href=listComm2.php>Liste commandes</a></li>");?>
 							<? affiche_pour("Employer", "<li id=champs><a href=listComm.php>Liste commandes</a></li>");?>
-							<? affiche_pour("Patron", "<li id=champs><a href=listComm.php>Liste commandes</a></li>");?>
+							<? affiche_pour("Patron", "<li id=champs><a href=listComm3.php>Liste commandes</a></li>");?>
 							<? if(!isset($_SESSION['user'])){?>
 								<li id="champs"><a href="connexion.php">Connexion</a></li>
 								<?}

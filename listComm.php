@@ -63,7 +63,7 @@
 					        	if ($donnees['ORD_Pret']==1) {
 					        	?>
 					        		Prete
-					        		<form method="post" action="listComm.php">
+					        		<form method="post" action="">
 					        		<input type="hidden" name="orderId" value="<?php echo $donnees['ORD_Id']; ?>">
 					        		<input type="submit" value="Payer" />
 					        		</form>
@@ -73,7 +73,7 @@
 					        	else {
 					        	?>
 					        		En attente
-					        		<form method="post" action="listComm.php">
+					        		<form method="post" action="">
 					        		<input type="hidden" name="orderId" value="<?php echo $donnees['ORD_Id']; ?>">
 					        		<input type="submit" value="Payer" />
 					        		</form>
