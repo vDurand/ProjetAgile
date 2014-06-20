@@ -33,13 +33,17 @@
 						<br/>
 						Quantité : <?php echo $donnees2['COM_Quantite']; ?>
 						<br/>
-					<?php
+						
+						
+						
+					<?php				
 					}
 					?>
-								
+
 					<br/><br/>
 			</fieldset>
-		<?php 										
+		<?php
+			
 		}
 		mysqli_free_result($reponse);
 		?>	
