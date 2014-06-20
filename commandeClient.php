@@ -41,7 +41,7 @@
 <div id="corps">
 	<h1>Ajouter une Commande</h1>
 	<br/><br/>
-				<form method="post" action="commandePost.php" name="commande" formtype="1" colvalue="2">
+				<form method="post" action="commandePost.php" name="commande" formtype="1" colvalue="1">
 					<div id="labelCat">
 						<table>
 							<tr id="Contact-List">
@@ -76,7 +76,7 @@
 			          					<select name="pizza[]">
 			          						<option value=""></option>
 			          			<?php
-	
+						
 		
 		$reponse = mysqli_query($db, "SELECT * FROM Pizza ORDER BY PIZ_Nom");
 		while ($donnees = mysqli_fetch_assoc($reponse))
@@ -102,6 +102,8 @@
 								</td>
 							</tr>
 							</div>
+
+
 							<!-- ZONE DUPLICATE -->
 							<tr id="duplicater2" style="display:none">
 								<td style="text-align: left; width: 150px;">

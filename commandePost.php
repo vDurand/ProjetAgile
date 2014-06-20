@@ -40,7 +40,6 @@
 				}
 			}
 		}
-		
 		$queryTres = "INSERT INTO Agile.Order (CLI_IdClient) VALUES ($client)";
 		$sqlTres = mysqli_query($db, $queryTres);
 		$errrTres=mysqli_error($db);
@@ -49,7 +48,6 @@
 			$donnees4 = mysqli_fetch_assoc($reponse4);
 			$clef=$donnees4['ORD_Id'];
 		}
-		
 		
 		foreach($_POST["pizza"] AS $pizza){
 		   $number=$quantite[$i];
@@ -65,7 +63,7 @@
 		   }
 		}
 		   
-		   		 /*  else {
+		   		   else {
 		   	$queryTres = "INSERT INTO `Agile`.`Order` (`CLI_IdClient`, `ORD_Id`) VALUES ($client, $numI, $clef)";
 		   
 		   	$query = "INSERT INTO Commander (PIZ_IdPizza, COM_Quantite) VALUES ('$pizza', '$number')";
@@ -91,7 +89,7 @@
 	   	  		 	}
 		   	  		  	
 		   		}
-		   }*/
+		   }
 		   
 		
 				
