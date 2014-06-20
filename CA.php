@@ -8,12 +8,11 @@ if($db = MySQLi_connect("localhost","projetAgile",'pizza', 'Agile', 0, '/media/s
 			echo '';
 		else
 			echo 'Erreur';
-		/*$sql="SELECT PER_Pseudo, PER_Mdp FROM Personne WHERE PER_Pseudo='$pseudo'";
-		
-		
+		$sql="SELECT date(ORD_Fin) FROM `Order` WHERE ORD_Fin != '' order by date(ORD_Fin) asc;";
 		$req = mysqli_query($db, $sql); //or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
-
-		$data = mysqli_fetch_assoc($req);*/
+		$data = mysqli_fetch_assoc($req);
+		if($data['date(ORD_Fin)'] != "0000-00-00")
+			echo $data['date(ORD_Fin)']."<br>";
 ?>
 </div>
 <?php  
