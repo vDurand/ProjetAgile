@@ -57,7 +57,7 @@
 												else
 													echo 'Erreur';
 													
-												$sql = "SELECT * FROM Personne WHERE PER_Nom = $_SESSION[nom] AND PER_Prenom = $_SESSION[prenom]";
+												$sql = "SELECT * FROM Client JOIN Personne USING(PER_Id) WHERE PER_Nom = '$_SESSION[nom]' AND PER_Prenom = '$_SESSION[prenom]'";
 												$req = mysqli_query($db, $sql);
 												$data = mysqli_fetch_assoc($req);	
 												  ?>          
@@ -253,6 +253,9 @@
 						<tr>
 							<td>
 								<span>
+									<input id="nomC" maxlength="255" name="nomC" type="hidden" value="" class="inputC">
+									<input id="prenomC" maxlength="255" name="prenomC" type="hidden" value="" class="inputC"> 
+									<input type="hidden" name="exist" value="1">
 									<input name="submit" type="submit" value="Ajouter" class="buttonC">&nbsp;&nbsp; 
 									<input name="reset" type="reset" value="Annuler" class="buttonC">
 								</span>
