@@ -53,7 +53,13 @@
 						
 					<?php				
 					}
+					if ($donnees['ORD_Note']!="") {
+						
+					
 					?>
+					<br>
+					Note : <?php echo $donnees['ORD_Note']; ?>
+					<?php } ?>
 					<br>
 					<i>Etat : 
 					        	<?php

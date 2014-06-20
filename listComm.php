@@ -27,8 +27,9 @@
 		
 		while ($donnees = mysqli_fetch_assoc($reponse))
 		{
-			if ($donnees['ORD_Paid']!=1) {
-				
+			if ($donnees['ORD_Paid']==1 && $donnees['ORD_Pret']==1) {}
+				else {
+
 			?><fieldset style="margin-top:1%;">
 				<legend  align="left"> Client : <?php echo $donnees['PER_Nom']; ?> <?php echo $donnees['PER_Prenom']; ?></legend>
 				<br/><br/>
@@ -57,25 +58,42 @@
 					        }
 					        	?>
 					        	<b>Total global : <?php echo $res; ?> &euro;</b>
-					        	<br/><br/>
+					        	<br/>
+
+					        	<?if ($donnees['ORD_Note']!="") {
+						
+					
+					?>
+					<br>
+					Note : <?php echo $donnees['ORD_Note']; ?>
+					<?php } ?>
+
+					        	<br/>
 					        	<i>Etat : 
 					        	<?php
+
 					        	if ($donnees['ORD_Pret']==1) {
 					        	?>
 					        		Prete
 					        		<form method="post" action="">
 					        		<input type="hidden" name="orderId" value="<?php echo $donnees['ORD_Id']; ?>">
-					        		<input type="submit" value="Payer" />
+					        		<input type="submit" value="Payée" />
+					        		
+
+
 					        		</form>
 					        		</br>
 					        	<?php
+					        	}
+					        	elseif ($donnees['ORD_Paid']==1) {
+					        		echo "Payée";			
 					        	}
 					        	else {
 					        	?>
 					        		En attente
 					        		<form method="post" action="">
 					        		<input type="hidden" name="orderId" value="<?php echo $donnees['ORD_Id']; ?>">
-					        		<input type="submit" value="Payer" />
+					        		<input type="submit" value="Payée" />
 					        		</form>
 					        		</br>
 					        	<?php
