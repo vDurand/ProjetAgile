@@ -28,6 +28,8 @@
 		
 		while ($donnees = mysqli_fetch_assoc($reponse))
 		{
+			if ($donnees['ORD_Pret']!=1) {
+				
 			?> 
 			<fieldset style="margin-top:1%;">
 				<legend  align="left"> Client : <?php echo $donnees['PER_Nom']; ?> <?php echo $donnees['PER_Prenom']; ?></legend>
@@ -55,7 +57,7 @@
 					<br>
 					<i>Etat : 
 					        	<?php
-					        	if ($donnees['ORD_Paid']==1&&$donnees['ORD_Pret']!=1) {
+					        	if ($donnees['ORD_Paid']==1) {
 					        		?> Payée 
 									
 									<form method="post" action="">
@@ -63,15 +65,6 @@
 					        		<input type="submit" value="Prêt" />
 					        		</form>
 					        		</br><?
-					        	}
-					        	elseif ($donnees['ORD_Pret']==1&&$donnees['ORD_Paid']!=1) {
-					        	?>
-					        		Prete
-					        		
-					        	<?php
-					        	}
-					        	elseif ($donnees['ORD_Pret']==1&&$donnees['ORD_Paid']==1) {
-					        		echo "Prete et Payée</br>";
 					        	}
 					        	else {
 					        	?>
@@ -88,7 +81,7 @@
 					<br/><br/>
 			</fieldset>
 		<?php
-			
+			}
 		}
 		mysqli_free_result($reponse);
 		?>	
